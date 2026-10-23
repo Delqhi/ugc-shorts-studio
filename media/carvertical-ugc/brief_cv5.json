@@ -1,0 +1,112 @@
+{
+  "mode": "proof",
+  "brand": "carVertical",
+  "product": "VIN-Check / Fahrzeughistorie (Coupon USC20)",
+  "language": "de",
+  "coupon": {
+    "code": "USC20",
+    "on_screen_from_pct": 60
+  },
+  "claims": [
+    {
+      "text": "Kein Unfall? Über 20.000 Euro Schaden",
+      "evidence": "m/v4_wreck.png",
+      "region": [
+        0,
+        0,
+        2938,
+        1538
+      ]
+    },
+    {
+      "text": "KILOMETER-MANIPULATION",
+      "evidence": "m/km.png",
+      "region": [
+        176,
+        538,
+        1212,
+        738
+      ]
+    },
+    {
+      "text": "75.026 KM",
+      "evidence": "m/chart.png",
+      "region": [
+        212,
+        554,
+        460,
+        618
+      ]
+    },
+    {
+      "text": "22.501 – 25.000 €",
+      "evidence": "m/cost.png",
+      "region": [
+        118,
+        870,
+        674,
+        957
+      ]
+    },
+    {
+      "text": "2 MINUTEN VIN-CHECK",
+      "evidence": "m/summary.png",
+      "region": [
+        95,
+        582,
+        1195,
+        646
+      ]
+    },
+    {
+      "text": "USC20: −20 % auf den Report",
+      "evidence": "m/summary.png",
+      "region": [
+        95,
+        933,
+        1195,
+        997
+      ]
+    }
+  ],
+  "material": [
+    {
+      "kind": "image",
+      "value": "m/v4_wreck.png",
+      "role": "evidence"
+    },
+    {
+      "kind": "image",
+      "value": "m/km.png",
+      "role": "evidence"
+    },
+    {
+      "kind": "image",
+      "value": "m/chart.png",
+      "role": "evidence"
+    },
+    {
+      "kind": "image",
+      "value": "m/cost.png",
+      "role": "evidence"
+    },
+    {
+      "kind": "image",
+      "value": "m/summary.png",
+      "role": "evidence"
+    }
+  ],
+  "vo": {
+    "script": "tts/vo_cv5.words.json",
+    "voice": "chatterbox-multilingual (Modal GPU T4)"
+  },
+  "platforms": [
+    "tiktok",
+    "instagram_reels",
+    "youtube_shorts"
+  ],
+  "source": {
+    "report": "carVertical Musterbericht (VW Passat)",
+    "coupon": "USC20"
+  }
+}

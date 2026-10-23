@@ -1,0 +1,143 @@
+{
+  "mode": "proof",
+  "brand": "Einfach Hausen",
+  "product": "Plattform fuer Handwerker & Eigentuemer",
+  "language": "de",
+  "coupon": {
+    "code": "EINFACH HAUSEN",
+    "on_screen_from_pct": 85
+  },
+  "claims": [
+    {
+      "text": "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €",
+      "evidence": "app/s1_receipt.png",
+      "region": [
+        415,
+        111,
+        942,
+        415
+      ]
+    },
+    {
+      "text": "Dein Team. Klare Zuständigkeiten.",
+      "evidence": "app/s2_team.png",
+      "region": [
+        28,
+        152,
+        803,
+        332
+      ]
+    },
+    {
+      "text": "Dokumente & Rechnungen an einem Ort",
+      "evidence": "app/s3_haus.png",
+      "region": [
+        55,
+        -9305,
+        997,
+        -9083
+      ]
+    },
+    {
+      "text": "Gebucht",
+      "evidence": "app/s4_gebucht.png",
+      "region": [
+        55,
+        -2603,
+        332,
+        -2520
+      ]
+    },
+    {
+      "text": "Auftragswert bleibt beim Partner — Zahlung direkt",
+      "evidence": "app/s5_zahlung.png",
+      "region": [
+        55,
+        -2052,
+        997,
+        -1858
+      ]
+    },
+    {
+      "text": "Digitaler Hauspass",
+      "evidence": "app/s6_passport.png",
+      "region": [
+        42,
+        438,
+        997,
+        554
+      ]
+    },
+    {
+      "text": "Dokumentierte Arbeiten in der Hausakte",
+      "evidence": "app/s7_historie.png",
+      "region": [
+        55,
+        -10933,
+        997,
+        -10656
+      ]
+    },
+    {
+      "text": "Rechnung für den Eigentümer",
+      "evidence": "app/s8_oinvoice.png",
+      "region": [
+        42,
+        637,
+        997,
+        831
+      ]
+    }
+  ],
+  "material": [
+    {
+      "kind": "image",
+      "value": "app/s1_receipt.png",
+      "role": "evidence"
+    },
+    {
+      "kind": "image",
+      "value": "app/s2_team.png",
+      "role": "evidence"
+    },
+    {
+      "kind": "image",
+      "value": "app/s3_haus.png",
+      "role": "evidence"
+    },
+    {
+      "kind": "image",
+      "value": "app/s4_gebucht.png",
+      "role": "evidence"
+    },
+    {
+      "kind": "image",
+      "value": "app/s5_zahlung.png",
+      "role": "evidence"
+    },
+    {
+      "kind": "image",
+      "value": "app/s6_passport.png",
+      "role": "evidence"
+    },
+    {
+      "kind": "image",
+      "value": "app/s7_historie.png",
+      "role": "evidence"
+    },
+    {
+      "kind": "image",
+      "value": "app/s8_oinvoice.png",
+      "role": "evidence"
+    }
+  ],
+  "vo": {
+    "script": "siehe tts/shorts/app.words.json",
+    "voice": "chatterbox-multilingual"
+  },
+  "platforms": [
+    "tiktok",
+    "instagram_reels",
+    "youtube_shorts"
+  ]
+}

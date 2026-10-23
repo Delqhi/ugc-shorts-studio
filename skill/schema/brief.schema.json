@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Proof-Short Brief",
+  "type": "object",
+  "required": ["brand", "product", "language", "coupon", "claims", "material", "vo"],
+  "additionalProperties": false,
+  "properties": {
+    "brand": {"type": "string", "description": "Marke/Produkt, z. B. carVertical"},
+    "product": {"type": "string"},
+    "language": {"type": "string", "enum": ["de", "en"], "default": "de"},
+    "coupon": {
+      "type": "object",
+      "description": "Pflicht-Code der Kampagne: sichtbar im Bild ab on_screen_from_pct % und in der Caption.",
+      "required": ["code"],
+      "properties": {
+        "code": {"type": "string", "examples": ["USC20"]},
+        "discount": {"type": "string", "examples": ["20 %"]},
+        "on_screen_from_pct": {"type": "number", "minimum": 30, "maximum": 90, "default": 55}
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Jeder Claim braucht Beleg + Pixelregion. Ohne Beleg fliegt der Claim raus (Gate G2/G3).",
+      "items": {
+        "type": "object",
+        "required": ["text", "evidence", "region"],
+        "properties": {
+          "text": {"type": "string"},
+          "evidence": {"type": "string", "description": "Pfad zur Bilddatei (relativ zum Workdir)"},
+          "region": {
+            "type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4,
+            "description": "[x0, y0, x1, y1] in Original-Pixeln des Bildes"
+          },
+          "on_screen": {"type": "string", "description": "Wie die Zahl im Video erscheint (Headline/Chip/Annotation)"}
+        }
+      }
+    },
+    "material": {
+      "type": "array",
+      "description": "Belegmaterial. Ohne Material: nur synthetischer Modus (keine Beleg-Claims).",
+      "items": {
+        "type": "object",
+        "required": ["kind", "value", "role"],
+        "properties": {
+          "kind": {"type": "string", "enum": ["url", "image", "video", "youtube", "screenshot"]},
+          "value": {"type": "string"},
+          "role": {"type": "string", "enum": ["evidence", "hero", "broll"]},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "vo": {
+      "type": "object",
+      "required": ["script"],
+      "properties": {
+        "script": {"type": "string", "description": "Sprechtext, wortgenau – das ASR-Gate prüft dagegen."},
+        "voice": {"type": "string", "default": "chatterbox-multilingual"},
+        "language_id": {"type": "string", "default": "de"},
+        "max_seconds": {"type": "number", "default": 26}
+      }
+    },
+    "hook": {
+      "type": "object",
+      "description": "Gefühl-Hook der ersten 2 Sekunden (siehe references/hooks.md).",
+      "properties": {
+        "pattern": {"type": "string", "examples": ["stempel-konter", "behauptung-widerspruch", "zahl-sturz", "frage-revealed", "countdown"]},
+        "headline": {"type": "string"},
+        "sub": {"type": "string"},
+        "stamp": {"type": "string"}
+      }
+    },
+    "platforms": {
+      "type": "array",
+      "items": {"type": "string", "enum": ["tiktok", "instagram_reels", "youtube_shorts"]},
+      "default": ["tiktok"]
+    },
+    "caption": {"type": "string", "description": "Post-Text; wird aus Claims+Code erzeugt, falls leer."},
+    "platform_submit": {
+      "type": "object",
+      "description": "Wo der Clip eingereicht wird (z. B. Content Rewards).",
+      "properties": {
+        "kind": {"type": "string", "examples": ["content-rewards"]},
+        "campaign_id": {"type": "string"},
+        "account": {"type": "string"}
+      }
+    }
+  }
+}

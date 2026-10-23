@@ -1,0 +1,6 @@
+assets/fonts/
+build_tmp/
+out/
+qa/
+*.wav
+*.mp4

@@ -1,0 +1,171 @@
+{
+  "_comment": "Highlight-Short aus einem YouTube-Video. Jeder Beat ist belegt: Zitat woertlich aus dem Transcript, Zeitstempel-Pille aus dem Span, Frame = Original-Frame an der Position. (Referenz aus dem Bau 22.10.2026)",
+  "meta": {
+    "fps": 30,
+    "duration": 15.6,
+    "vo": "tts/shorts/s1.wav",
+    "words": "tts/shorts/s1.words.json",
+    "vo_end": 15.0,
+    "out": "out/short_nvidia_robots.mp4",
+    "ffmpeg": "/usr/local/bin/ffmpeg",
+    "fonts": {
+      "display": "assets/fonts/Anton-Regular.ttf",
+      "text": "assets/fonts/Montserrat-ExtraBold.ttf"
+    }
+  },
+  "scenes": [
+    {
+      "kind": "clip",
+      "tag": "NVIDIA GTC 2026",
+      "start": 0.0,
+      "end": 3.1,
+      "media": {
+        "path": "yt/yt_12.png",
+        "span": 1.0,
+        "span_to": 1.1,
+        "fx": 640,
+        "fy": 360,
+        "dur": 3.1
+      },
+      "headlines": [
+        [
+          0.0,
+          "20 CM GROSSE ROBOTER",
+          "white"
+        ]
+      ],
+      "chip": {
+        "text": "AUF DER NVIDIA-BÜHNE",
+        "at": 0.35,
+        "x": 34,
+        "y": 60,
+        "size": 56
+      },
+      "stamp": {
+        "text": "WAHNSINN",
+        "at": 1.45,
+        "x": 0.55,
+        "y": 0.66,
+        "deg": -7,
+        "size": 150
+      },
+      "timestamp": "0:12",
+      "quote": "you have a camera. oh yeah, don't trip"
+    },
+    {
+      "kind": "clip",
+      "tag": "BEWEIS 01 · RTX SPARK",
+      "start": 3.1,
+      "end": 6.2,
+      "media": {
+        "path": "yt/yt_38.png",
+        "span": 1.0,
+        "span_to": 1.08,
+        "fx": 640,
+        "fy": 360,
+        "dur": 3.1
+      },
+      "timestamp": "0:35",
+      "quote": "you were created on the RTX Spark",
+      "headlines": [
+        [
+          0.0,
+          "GEBOREN AUF EINER RTX SPARK",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "clip",
+      "tag": "BEWEIS 02 · ELTERNFIRMA",
+      "start": 6.2,
+      "end": 8.4,
+      "media": {
+        "path": "yt/yt_66.png",
+        "span": 1.0,
+        "span_to": 1.08,
+        "fx": 640,
+        "fy": 360,
+        "dur": 2.2
+      },
+      "timestamp": "1:05",
+      "quote": "Your parents are called Pollen",
+      "headlines": [
+        [
+          0.0,
+          "ELTERN: POLLEN ROBOTICS",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "clip",
+      "tag": "BEWEIS 03 · SALTO",
+      "start": 8.4,
+      "end": 9.9,
+      "media": {
+        "path": "yt/yt_112.png",
+        "span": 1.0,
+        "span_to": 1.1,
+        "fx": 640,
+        "fy": 400,
+        "dur": 1.5
+      },
+      "timestamp": "1:48",
+      "quote": "Can you do a somersault?",
+      "headlines": [
+        [
+          0.0,
+          "KANN DER EINEN SALTO?",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "clip",
+      "tag": "BEWEIS 04 · AGENTEN",
+      "start": 9.9,
+      "end": 12.9,
+      "media": {
+        "path": "yt/yt_158.png",
+        "span": 1.0,
+        "span_to": 1.08,
+        "fx": 640,
+        "fy": 360,
+        "dur": 3.0
+      },
+      "timestamp": "2:32",
+      "quote": "Don't just run models anymore",
+      "headlines": [
+        [
+          0.0,
+          "KEINE MODELLE. NUR AGENTEN.",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "clip",
+      "tag": "VOLLSTÄNDIGES VIDEO",
+      "start": 12.9,
+      "end": 15.6,
+      "media": {
+        "path": "yt/yt_200.png",
+        "span": 1.0,
+        "span_to": 1.06,
+        "fx": 640,
+        "fy": 380,
+        "dur": 2.7
+      },
+      "timestamp": "4:06",
+      "quote": "Everybody can build agents",
+      "headlines": [
+        [
+          0.0,
+          "GANZES VIDEO: DPCCARS",
+          "white"
+        ]
+      ]
+    }
+  ]
+}

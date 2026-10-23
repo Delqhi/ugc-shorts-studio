@@ -1,0 +1,404 @@
+{
+ "meta": {
+  "fps": 30,
+  "duration": 27.2,
+  "vo_end": 25.66,
+  "out": "out/cv5.mp4",
+  "ffmpeg": "/usr/local/bin/ffmpeg",
+  "frame_style": "hazard",
+  "fonts": {
+   "display": "assets/fonts/Anton-Regular.ttf",
+   "text": "assets/fonts/Montserrat-ExtraBold.ttf"
+  },
+  "vo": "tts/vo_cv5.wav",
+  "words": "tts/vo_cv5.words.json",
+  "code": {
+   "label": "CODE USC20 · −20 %",
+   "from": 15.4
+  }
+ },
+ "scenes": [
+  {
+   "kind": "danger",
+   "tag": "BEWEIS 01 · UNFALLFOTO",
+   "start": 0.0,
+   "end": 5.65,
+   "fit": "card",
+   "media": {
+    "path": "m/v4_wreck.png",
+    "unit": 2.4,
+    "span": 1.0,
+    "fx": 560,
+    "fx_to": 820,
+    "fy": 330,
+    "anchor": [
+     0.5,
+     0.5
+    ],
+    "dur": 5.65,
+    "punch_step": 0.06,
+    "card_y": 60
+   },
+   "ring": {
+    "center": [
+     885,
+     375
+    ],
+    "rx": 205,
+    "ry": 150,
+    "width": 11,
+    "at": 0.5,
+    "dur": 0.35
+   },
+   "chops": [
+    [
+     0.0,
+     "KEIN UNFALL?",
+     "white"
+    ],
+    [
+     1.06,
+     "20.000 €",
+     "yellow"
+    ],
+    [
+     2.16,
+     "SCHADEN",
+     "yellow"
+    ]
+   ],
+   "chop_y": 0.2,
+   "stamp": {
+    "text": "WAHNSINN!",
+    "at": 2.7,
+    "x": 0.5,
+    "y": 0.56,
+    "deg": -7,
+    "size": 170
+   },
+   "headlines": []
+  },
+  {
+   "kind": "evidence",
+   "tag": "BEWEIS 02 · KILOMETERSTAND",
+   "start": 5.65,
+   "end": 9.2,
+   "media": {
+    "path": "m/km.png",
+    "span": 1290,
+    "span_to": 1200,
+    "fx": 645,
+    "fy": 620,
+    "anchor": [
+     0.5,
+     0.33
+    ],
+    "dur": 3.549999999999999
+   },
+   "headlines": [
+    [
+     0.0,
+     "DER REPORT SAGT:",
+     "white"
+    ],
+    [
+     1.43,
+     "KILOMETER-MANIPULATION",
+     "yellow"
+    ]
+   ],
+   "annotations": [
+    {
+     "type": "rect",
+     "box": [
+      176,
+      538,
+      1212,
+      738
+     ],
+     "color": "yellow",
+     "width": 9,
+     "at": 1.45,
+     "dur": 0.8
+    },
+    {
+     "type": "arrow",
+     "from": [
+      1150,
+      330
+     ],
+     "to": [
+      1060,
+      515
+     ],
+     "color": "red",
+     "width": 10,
+     "at": 2.0,
+     "dur": 0.4
+    }
+   ]
+  },
+  {
+   "kind": "evidence",
+   "tag": "BEWEIS 03 · KM-VERLAUF",
+   "start": 9.2,
+   "end": 15.2,
+   "media": {
+    "path": "m/chart.png",
+    "span": 1290,
+    "span_to": 1200,
+    "fx": 645,
+    "fy": 1050,
+    "anchor": [
+     0.5,
+     0.5
+    ],
+    "dur": 6.0
+   },
+   "headlines": [
+    [
+     0.0,
+     "LETZTER STAND",
+     "white"
+    ],
+    [
+     1.18,
+     "75.026 KM",
+     "yellow"
+    ],
+    [
+     3.34,
+     "TYPISCH: 153.150 KM",
+     "white"
+    ]
+   ],
+   "annotations": [
+    {
+     "type": "rect",
+     "box": [
+      212,
+      554,
+      460,
+      618
+     ],
+     "color": "yellow",
+     "width": 7,
+     "at": 1.18,
+     "dur": 0.6
+    },
+    {
+     "type": "ring",
+     "center": [
+      786,
+      1446
+     ],
+     "rx": 74,
+     "ry": 74,
+     "color": "red",
+     "width": 9,
+     "at": 1.95,
+     "dur": 0.5
+    },
+    {
+     "type": "ring",
+     "center": [
+      786,
+      1446
+     ],
+     "rx": 92,
+     "ry": 92,
+     "color": "yellow",
+     "width": 4,
+     "at": 2.3,
+     "dur": 0.45
+    },
+    {
+     "type": "rect",
+     "box": [
+      712,
+      600,
+      924,
+      656
+     ],
+     "color": "yellow",
+     "width": 7,
+     "at": 4.94,
+     "dur": 0.5
+    },
+    {
+     "type": "label",
+     "text": "KILOMETER-RÜCKSTELLUNG",
+     "at_xy": [
+      706,
+      1446
+     ],
+     "at": 2.55,
+     "dur": 0.4,
+     "size": 32,
+     "color": "yellow",
+     "border": "red"
+    }
+   ]
+  },
+  {
+   "kind": "evidence",
+   "tag": "BEWEIS 04 · ZUSTANDSHISTORIE",
+   "start": 15.2,
+   "end": 19.75,
+   "media": {
+    "path": "m/cost.png",
+    "span": 1290,
+    "span_to": 1200,
+    "fx": 645,
+    "fy": 1010,
+    "anchor": [
+     0.5,
+     0.42
+    ],
+    "dur": 4.550000000000001
+   },
+   "headlines": [
+    [
+     0.0,
+     "UND DANN DER SCHADEN",
+     "white"
+    ],
+    [
+     1.32,
+     "22.501 – 25.000 €",
+     "yellow"
+    ],
+    [
+     3.18,
+     "48 % DES FAHRZEUGWERTS",
+     "white"
+    ]
+   ],
+   "annotations": [
+    {
+     "type": "rect",
+     "box": [
+      118,
+      870,
+      674,
+      957
+     ],
+     "color": "yellow",
+     "width": 9,
+     "at": 1.32,
+     "dur": 0.7
+    },
+    {
+     "type": "arrow",
+     "from": [
+      1150,
+      700
+     ],
+     "to": [
+      720,
+      890
+     ],
+     "color": "red",
+     "width": 10,
+     "at": 1.7,
+     "dur": 0.4
+    },
+    {
+     "type": "rect",
+     "box": [
+      146,
+      1094,
+      980,
+      1165
+     ],
+     "color": "yellow",
+     "width": 7,
+     "at": 3.18,
+     "dur": 0.6
+    }
+   ]
+  },
+  {
+   "kind": "evidence",
+   "tag": "CHECK · ZUSAMMENFASSUNG",
+   "start": 19.75,
+   "end": 22.92,
+   "media": {
+    "path": "m/summary.png",
+    "span": 1290,
+    "fx": 645,
+    "fy": 640,
+    "fy_to": 1160,
+    "anchor": [
+     0.5,
+     0.35
+    ],
+    "dur": 3.1700000000000017
+   },
+   "headlines": [
+    [
+     0.09,
+     "2 MINUTEN VIN-CHECK",
+     "white"
+    ],
+    [
+     1.89,
+     "BEVOR DU ZAHLST",
+     "yellow"
+    ]
+   ],
+   "annotations": [
+    {
+     "type": "rect",
+     "box": [
+      95,
+      582,
+      1195,
+      646
+     ],
+     "color": "yellow",
+     "width": 7,
+     "at": 0.35,
+     "dur": 0.55
+    },
+    {
+     "type": "rect",
+     "box": [
+      95,
+      933,
+      1195,
+      997
+     ],
+     "color": "yellow",
+     "width": 7,
+     "at": 1.05,
+     "dur": 0.55
+    },
+    {
+     "type": "rect",
+     "box": [
+      95,
+      1281,
+      1195,
+      1345
+     ],
+     "color": "yellow",
+     "width": 7,
+     "at": 1.75,
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "kind": "coupon",
+   "tag": "DEIN RABATT",
+   "start": 22.92,
+   "end": 27.2,
+   "code": "USC20",
+   "sub": "−20 % AUF DEINEN REPORT",
+   "cta": "VIN-Check auf carvertical.com",
+   "y": 1120,
+   "size": 300
+  }
+ ]
+}

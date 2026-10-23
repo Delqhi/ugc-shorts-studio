@@ -1,0 +1,125 @@
+{
+  "mode": "proof",
+  "brand": "NVIDIA / DPCcars (YouTube-Highlight)",
+  "product": "Highlight-Short aus einem GTC-2026-Video",
+  "language": "de",
+  "coupon": {
+    "code": "GANZES VIDEO",
+    "on_screen_from_pct": 92
+  },
+  "claims": [
+    {
+      "text": "you have a camera. oh yeah, don't trip",
+      "evidence": "yt/yt_12.png",
+      "region": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    },
+    {
+      "text": "you were created on the RTX Spark",
+      "evidence": "yt/yt_38.png",
+      "region": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    },
+    {
+      "text": "Your parents are called Pollen",
+      "evidence": "yt/yt_66.png",
+      "region": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    },
+    {
+      "text": "Trained you in the cloud on a whole bunch of NVIDIA supercomputers",
+      "evidence": "yt/yt_46.png",
+      "region": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    },
+    {
+      "text": "Can you do a somersault?",
+      "evidence": "yt/yt_112.png",
+      "region": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    },
+    {
+      "text": "Don't just run models anymore",
+      "evidence": "yt/yt_158.png",
+      "region": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    },
+    {
+      "text": "we're also extending into the next generation, which is where you guys come in",
+      "evidence": "yt/yt_200.png",
+      "region": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    },
+    {
+      "text": "Every company in Europe will become an AI company",
+      "evidence": "yt/yt_215.png",
+      "region": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    },
+    {
+      "text": "Everybody can build agents",
+      "evidence": "yt/yt_240.png",
+      "region": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    }
+  ],
+  "material": [
+    {
+      "kind": "video",
+      "value": "https://youtu.be/Nt6d62vN7CU",
+      "role": "broll"
+    }
+  ],
+  "vo": {
+    "script": "siehe tts/shorts/yt.words.json",
+    "voice": "chatterbox-multilingual"
+  },
+  "platforms": [
+    "tiktok",
+    "instagram_reels",
+    "youtube_shorts"
+  ],
+  "source": {
+    "url": "https://youtu.be/Nt6d62vN7CU",
+    "channel": "DPCcars",
+    "title": "Jensen Huang's Tiny Microduck Robots Steal the Show at NVIDIA GTC 2026",
+    "duration": 246.0,
+    "transcript": "tts/shorts/yt.words.json"
+  }
+}

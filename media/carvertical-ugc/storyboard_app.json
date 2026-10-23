@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "fps": 30,
+    "duration": 34.24,
+    "out": "out/app.mp4",
+    "ffmpeg": "/usr/local/bin/ffmpeg",
+    "fonts": {
+      "display": "assets/fonts/Anton-Regular.ttf",
+      "text": "assets/fonts/Montserrat-ExtraBold.ttf"
+    },
+    "vo": "tts/shorts/app.wav",
+    "words": "tts/shorts/app.words.json"
+  },
+  "scenes": [
+    {
+      "kind": "danger",
+      "start": 0.0,
+      "end": 4.58,
+      "tag": "BEWEIS 01 · BELEG",
+      "fit": "cover",
+      "chops": [
+        [
+          0.0,
+          "150,90 €",
+          "yellow"
+        ],
+        [
+          0.8,
+          "SOFORT",
+          "white"
+        ],
+        [
+          1.55,
+          "BEZAHLT",
+          "yellow"
+        ]
+      ],
+      "chop_y": 0.68,
+      "pulse": 0.04,
+      "headlines": [],
+      "media": {
+        "path": "app/s1_receipt.png",
+        "span": 1.0,
+        "fx": 540,
+        "fy": 1020,
+        "punch_step": 0.04,
+        "dur": 4.58
+      }
+    },
+    {
+      "kind": "evidence",
+      "start": 4.58,
+      "end": 8.78,
+      "tag": "BEWEIS 02",
+      "media": {
+        "path": "app/s2_team.png",
+        "span": 1080,
+        "span_to": 1044,
+        "fx": 540,
+        "fy": 960,
+        "dur": 4.199999999999999,
+        "punch": false
+      },
+      "headlines": [
+        [
+          0.0,
+          "WER MACHT WAS?",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "evidence",
+      "start": 8.78,
+      "end": 11.42,
+      "tag": "BEWEIS 03",
+      "media": {
+        "path": "app/s4_gebucht.png",
+        "span": 1080,
+        "span_to": 1044,
+        "fx": 540,
+        "fy": 960,
+        "dur": 2.6400000000000006,
+        "punch": false
+      },
+      "headlines": [
+        [
+          0.0,
+          "GEBUCHT. FERTIG.",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "evidence",
+      "start": 11.42,
+      "end": 14.2,
+      "tag": "BEWEIS 04",
+      "media": {
+        "path": "app/s3_haus.png",
+        "span": 1080,
+        "span_to": 1044,
+        "fx": 540,
+        "fy": 960,
+        "dur": 2.7799999999999994,
+        "punch": false
+      },
+      "headlines": [
+        [
+          0.0,
+          "ALLES AN EINEM ORT",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "evidence",
+      "start": 14.2,
+      "end": 18.08,
+      "tag": "BEWEIS 05",
+      "media": {
+        "path": "app/s5_zahlung.png",
+        "span": 1080,
+        "span_to": 1044,
+        "fx": 540,
+        "fy": 960,
+        "dur": 3.879999999999999,
+        "punch": false
+      },
+      "headlines": [
+        [
+          0.0,
+          "DIREKT BEZAHLT",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "evidence",
+      "start": 18.08,
+      "end": 22.3,
+      "tag": "BEWEIS 06",
+      "media": {
+        "path": "app/s7_historie.png",
+        "span": 1080,
+        "span_to": 1044,
+        "fx": 540,
+        "fy": 960,
+        "dur": 4.220000000000002,
+        "punch": false
+      },
+      "headlines": [
+        [
+          0.0,
+          "HAUSAKTE MERKT ALLES",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "evidence",
+      "start": 22.3,
+      "end": 24.58,
+      "tag": "BEWEIS 07",
+      "media": {
+        "path": "app/s6_passport.png",
+        "span": 1080,
+        "span_to": 1044,
+        "fx": 540,
+        "fy": 960,
+        "dur": 2.2799999999999976,
+        "punch": false
+      },
+      "headlines": [
+        [
+          0.0,
+          "EIN HAUSPASS",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "evidence",
+      "start": 24.58,
+      "end": 31.84,
+      "tag": "BEWEIS 08",
+      "media": {
+        "path": "app/s8_oinvoice.png",
+        "span": 1080,
+        "span_to": 1044,
+        "fx": 540,
+        "fy": 960,
+        "dur": 7.260000000000002,
+        "punch": false
+      },
+      "headlines": [
+        [
+          0.0,
+          "STATT FÜNF MAILS",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "coupon",
+      "start": 31.84,
+      "end": 34.24,
+      "tag": "EINFACH HAUSEN",
+      "code": "EINFACH HAUSEN",
+      "sub": "FÜR HANDWERKER & EIGENTÜMER",
+      "cta": "einfachhausen.de",
+      "y": 700,
+      "size": 110
+    }
+  ]
+}

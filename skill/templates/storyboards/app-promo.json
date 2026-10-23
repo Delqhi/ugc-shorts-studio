@@ -1,0 +1,139 @@
+{
+  "_comment": "App-Promo-Short aus echten App-Screenshots (design/workspace-preview). Jeder Beat = ein echter Screen, kein Mockup. (Referenz aus dem Bau 22.10.2026)",
+  "meta": {
+    "fps": 30,
+    "duration": 12.4,
+    "vo": "tts/shorts/s2.wav",
+    "words": "tts/shorts/s2.words.json",
+    "vo_end": 11.6,
+    "out": "out/short_einfachhausen_app.mp4",
+    "ffmpeg": "/usr/local/bin/ffmpeg",
+    "fonts": {
+      "display": "assets/fonts/Anton-Regular.ttf",
+      "text": "assets/fonts/Montserrat-ExtraBold.ttf"
+    }
+  },
+  "scenes": [
+    {
+      "kind": "clip",
+      "tag": "BEWEIS 01 · ZAHLUNGSBELEG",
+      "start": 0.0,
+      "end": 2.4,
+      "media": {
+        "path": "app/a_receipt.png",
+        "span": 1.0,
+        "span_to": 1.06,
+        "fx": 540,
+        "fy": 277,
+        "dur": 2.4
+      },
+      "quote": "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €",
+      "headlines": [
+        [
+          0.0,
+          "150,90 € IN SEKUNDEN",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "clip",
+      "tag": "BEWEIS 02 · ZUSTÄNDIGKEITEN",
+      "start": 2.4,
+      "end": 4.4,
+      "media": {
+        "path": "app/a_team.png",
+        "span": 1.0,
+        "span_to": 1.05,
+        "fx": 540,
+        "fy": 305,
+        "dur": 2.0
+      },
+      "quote": "Dein Team. Klare Zuständigkeiten.",
+      "headlines": [
+        [
+          0.0,
+          "WER MACHT WAS? STEHT DRAUF",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "clip",
+      "tag": "BEWEIS 03 · HAUSAKTE",
+      "start": 4.4,
+      "end": 6.4,
+      "media": {
+        "path": "app/a_haus.png",
+        "span": 1.0,
+        "span_to": 1.05,
+        "fx": 540,
+        "fy": 303,
+        "dur": 2.0
+      },
+      "quote": "Planen & Vorbereiten · Mein Jahr · Technik & Geräte",
+      "headlines": [
+        [
+          0.0,
+          "ALLES AN EINEM ORT",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "clip",
+      "tag": "BEWEIS 04 · AUFTRÄGE",
+      "start": 6.4,
+      "end": 8.4,
+      "media": {
+        "path": "app/a_owner.png",
+        "span": 1.0,
+        "span_to": 1.05,
+        "fx": 540,
+        "fy": 303,
+        "dur": 2.0
+      },
+      "quote": "Gebucht — Auftrag, Termin, Anfrage",
+      "headlines": [
+        [
+          0.0,
+          "AUFTRAG, TERMIN, ANFRAGE",
+          "yellow"
+        ]
+      ]
+    },
+    {
+      "kind": "clip",
+      "tag": "BEWEIS 05 · ALLES AN EINEM ORT",
+      "start": 8.4,
+      "end": 10.2,
+      "media": {
+        "path": "app/a_haus.png",
+        "span": 1.06,
+        "span_to": 1.0,
+        "fx": 540,
+        "fy": 303,
+        "dur": 1.8
+      },
+      "quote": "Aufträge, Termine, Anfragen, Dokumente, Rechnungen",
+      "headlines": [
+        [
+          0.0,
+          "EIN ORT FÜR ALLES",
+          "white"
+        ]
+      ]
+    },
+    {
+      "kind": "coupon",
+      "tag": "EINFACH HAUSEN",
+      "start": 10.2,
+      "end": 12.4,
+      "code": "EINFACH HAUSEN",
+      "sub": "FÜR HANDWERKER & EIGENTÜMER",
+      "cta": "einfachhausen.de",
+      "y": 700,
+      "size": 110
+    }
+  ]
+}

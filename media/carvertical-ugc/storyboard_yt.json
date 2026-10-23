@@ -1,0 +1,335 @@
+{
+  "meta": {
+    "fps": 30,
+    "duration": 31.74,
+    "out": "out/yt.mp4",
+    "ffmpeg": "/usr/local/bin/ffmpeg",
+    "fonts": {
+      "display": "assets/fonts/Anton-Regular.ttf",
+      "text": "assets/fonts/Montserrat-ExtraBold.ttf"
+    },
+    "vo": "tts/shorts/yt.wav",
+    "words": "tts/shorts/yt.words.json"
+  },
+  "scenes": [
+    {
+      "kind": "danger",
+      "start": 0.0,
+      "end": 3.56,
+      "tag": "BEWEIS 01",
+      "fit": "card",
+      "chops": [
+        [
+          0.0,
+          "20 CM",
+          "yellow"
+        ],
+        [
+          0.72,
+          "ROBOTER",
+          "white"
+        ],
+        [
+          1.84,
+          "SELBSTSTÄNDIG",
+          "yellow"
+        ]
+      ],
+      "chop_y": 0.2,
+      "timestamp": "0:12",
+      "quote": "you have a camera. oh yeah, don't trip",
+      "source": {
+        "duration": 246.0,
+        "span": [
+          12,
+          21
+        ]
+      },
+      "stamp": {
+        "text": "WAHNSINN!",
+        "at": 2.9,
+        "x": 0.5,
+        "y": 0.3,
+        "deg": -7,
+        "size": 170
+      },
+      "headlines": [],
+      "media": {
+        "path": "yt/yt_12.png",
+        "span": 1.0,
+        "fx": 640,
+        "fy": 360,
+        "card_y": 200,
+        "punch_step": 0.05,
+        "dur": 3.56
+      }
+    },
+    {
+      "kind": "clip",
+      "start": 3.56,
+      "end": 8.0,
+      "tag": "BEWEIS 02",
+      "media": {
+        "path": "yt/yt_38.png",
+        "span": 1.0,
+        "span_to": 1.06,
+        "fx": 640,
+        "fy": 360,
+        "dur": 4.4399999999999995,
+        "punch": false
+      },
+      "fit": "card",
+      "timestamp": "0:35",
+      "quote": "you were created on the RTX Spark",
+      "headlines": [
+        [
+          0.0,
+          "RTX SPARK",
+          "yellow"
+        ]
+      ],
+      "source": {
+        "duration": 246.0,
+        "span": [
+          35,
+          44
+        ]
+      }
+    },
+    {
+      "kind": "clip",
+      "start": 8.0,
+      "end": 10.06,
+      "tag": "BEWEIS 03",
+      "media": {
+        "path": "yt/yt_66.png",
+        "span": 1.0,
+        "span_to": 1.06,
+        "fx": 640,
+        "fy": 360,
+        "dur": 2.0600000000000005,
+        "punch": false
+      },
+      "fit": "card",
+      "timestamp": "1:05",
+      "quote": "Your parents are called Pollen",
+      "headlines": [
+        [
+          0.0,
+          "POLLEN ROBOTICS",
+          "yellow"
+        ]
+      ],
+      "source": {
+        "duration": 246.0,
+        "span": [
+          65,
+          74
+        ]
+      }
+    },
+    {
+      "kind": "clip",
+      "start": 10.06,
+      "end": 11.82,
+      "tag": "BEWEIS 04",
+      "media": {
+        "path": "yt/yt_46.png",
+        "span": 1.0,
+        "span_to": 1.06,
+        "fx": 640,
+        "fy": 360,
+        "dur": 1.7599999999999998,
+        "punch": false
+      },
+      "fit": "card",
+      "timestamp": "0:46",
+      "quote": "Trained you in the cloud on a whole bunch of NVIDIA supercomputers",
+      "headlines": [
+        [
+          0.0,
+          "IN DER CLOUD",
+          "yellow"
+        ]
+      ],
+      "source": {
+        "duration": 246.0,
+        "span": [
+          46,
+          55
+        ]
+      }
+    },
+    {
+      "kind": "clip",
+      "start": 11.82,
+      "end": 13.98,
+      "tag": "BEWEIS 05",
+      "media": {
+        "path": "yt/yt_112.png",
+        "span": 1.0,
+        "span_to": 1.06,
+        "fx": 640,
+        "fy": 360,
+        "dur": 2.16,
+        "punch": false
+      },
+      "fit": "card",
+      "timestamp": "1:48",
+      "quote": "Can you do a somersault?",
+      "headlines": [
+        [
+          0.0,
+          "EIN SALTO?",
+          "yellow"
+        ]
+      ],
+      "source": {
+        "duration": 246.0,
+        "span": [
+          108,
+          117
+        ]
+      }
+    },
+    {
+      "kind": "clip",
+      "start": 13.98,
+      "end": 18.16,
+      "tag": "BEWEIS 06",
+      "media": {
+        "path": "yt/yt_158.png",
+        "span": 1.0,
+        "span_to": 1.06,
+        "fx": 640,
+        "fy": 360,
+        "dur": 4.18,
+        "punch": false
+      },
+      "fit": "card",
+      "timestamp": "2:32",
+      "quote": "Don't just run models anymore",
+      "headlines": [
+        [
+          0.0,
+          "NUR AGENTEN",
+          "yellow"
+        ]
+      ],
+      "source": {
+        "duration": 246.0,
+        "span": [
+          152,
+          161
+        ]
+      }
+    },
+    {
+      "kind": "clip",
+      "start": 18.16,
+      "end": 21.7,
+      "tag": "BEWEIS 07",
+      "media": {
+        "path": "yt/yt_200.png",
+        "span": 1.0,
+        "span_to": 1.06,
+        "fx": 640,
+        "fy": 360,
+        "dur": 3.539999999999999,
+        "punch": false
+      },
+      "fit": "card",
+      "timestamp": "3:20",
+      "quote": "we're also extending into the next generation, which is where you guys come in",
+      "headlines": [
+        [
+          0.0,
+          "PHYSICAL AI",
+          "yellow"
+        ]
+      ],
+      "source": {
+        "duration": 246.0,
+        "span": [
+          200,
+          209
+        ]
+      }
+    },
+    {
+      "kind": "clip",
+      "start": 21.7,
+      "end": 25.42,
+      "tag": "BEWEIS 08",
+      "media": {
+        "path": "yt/yt_215.png",
+        "span": 1.0,
+        "span_to": 1.06,
+        "fx": 640,
+        "fy": 360,
+        "dur": 3.7200000000000024,
+        "punch": false
+      },
+      "fit": "card",
+      "timestamp": "3:35",
+      "quote": "Every company in Europe will become an AI company",
+      "headlines": [
+        [
+          0.0,
+          "JEDE FIRMA KI-FIRMA",
+          "yellow"
+        ]
+      ],
+      "source": {
+        "duration": 246.0,
+        "span": [
+          215,
+          224
+        ]
+      }
+    },
+    {
+      "kind": "clip",
+      "start": 25.42,
+      "end": 29.34,
+      "tag": "BEWEIS 09",
+      "media": {
+        "path": "yt/yt_240.png",
+        "span": 1.0,
+        "span_to": 1.06,
+        "fx": 640,
+        "fy": 360,
+        "dur": 3.919999999999998,
+        "punch": false
+      },
+      "fit": "card",
+      "timestamp": "4:00",
+      "quote": "Everybody can build agents",
+      "headlines": [
+        [
+          0.0,
+          "ECHTE PHYSIK",
+          "yellow"
+        ]
+      ],
+      "source": {
+        "duration": 246.0,
+        "span": [
+          240,
+          249
+        ]
+      }
+    },
+    {
+      "kind": "coupon",
+      "start": 29.34,
+      "end": 31.74,
+      "tag": "VIDEO",
+      "code": "GANZES VIDEO",
+      "sub": "NVIDIA GTC 2026 · DPCCARS",
+      "cta": "Link in Bio",
+      "y": 720,
+      "size": 110
+    }
+  ]
+}
