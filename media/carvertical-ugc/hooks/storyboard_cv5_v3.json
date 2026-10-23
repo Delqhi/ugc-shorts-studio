@@ -24,7 +24,7 @@
           "role": "editorial_question"
         }
       ],
-      "vo_cue": "Unfallfrei?",
+      "vo_cue": "Originalton 0,00–0,70: „Kein Unfall,“; die sichtbare Frage „UNFALLFREI?“ ist redaktionell, kein Verkäufer-Zitat.",
       "brief_claims": []
     },
     {
@@ -43,7 +43,7 @@
           "brief_claim": "22.501 – 25.000 €"
         }
       ],
-      "vo_cue": "Wirklich?",
+      "vo_cue": "Originalton ab 1,06: „über 20.000 Euro Schaden.“ Der sichtbare Report präzisiert die gerundete VO-Angabe.",
       "brief_claims": [
         "Kein Unfall? Über 20.000 Euro Schaden",
         "22.501 – 25.000 €"

@@ -232,7 +232,10 @@ class Trial:
     def opening_question(self, t: float) -> Image.Image:
         beat = self.board["beats"][0]
         img = beat["images"][0]
-        frame = self.background(img, t, blur=False, dark=0.22 if self.short == "cv5" else 0.44)
+        # Beim Auto die Schadensquelle erst NACH der offenen Frage scharf zeigen:
+        # sonst verrät das Rad den Konter schon im ersten Frame.
+        frame = self.background(img, t, blur=self.short == "cv5",
+                                dark=0.33 if self.short == "cv5" else 0.44)
         if self.short == "app":
             frame = self.background(img, t, blur=True, dark=0.52)
             self.panel(frame, img, (45, 630, 1045, 815), 38, 590, 644)
@@ -251,7 +254,7 @@ class Trial:
         img = beat["images"][0]
         frame = self.background(img, t, blur=self.short != "cv5", dark=0.35 if self.short == "cv5" else 0.76)
         # 0,8 s ist ein echter harter Bildwechsel, kein sanfter Crossfade.
-        # Die 2-Frame-Belichtung betont den Cut; das Bild bleibt stets erkennbar.
+        # Die kurze Belichtung (bei 30 fps drei Frames) betont den Cut.
         if self.short == "cv5":
             proof = beat["images"][1]
             box = self.panel(frame, proof, self.proofs["cv5"], 38, 833, 644,

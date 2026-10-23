@@ -94,7 +94,7 @@ def main(argv: list[str] | None = None) -> int:
         args.json.parent.mkdir(parents=True, exist_ok=True)
         args.json.write_text(json.dumps({"kind": "silent-hook-motion-gate", "results": results,
                                          "failed": failed}, indent=2, ensure_ascii=False) + "\n")
-    print("Nur Hook-Preview-Bewegung gemessen; Original-Preflight/ASR/Publikumstest stehen aus.")
+    print("Nur Stumm-Preview-Bewegung gemessen; der separate CV5-V3-Ganzclip hat eigenen MP4-Preflight. ASR/Publikumstest weiter offen.")
     return 1 if failed else 0
 
 

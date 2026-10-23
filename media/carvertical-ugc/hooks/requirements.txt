@@ -1,3 +1,4 @@
-# Nur für stumme, schnelle Hook-Experimente; keine Modal-/TTS-Credentials nötig.
+# Lokale Hook-Exporte und voller MP4-Preflight ohne System-ffprobe; keine TTS-Credentials.
 Pillow>=10,<14
 imageio-ffmpeg>=0.6,<1
+av>=15,<19

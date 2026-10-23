@@ -1,8 +1,8 @@
-# P1 – neun Hook-Storyboards, noch keine neun neuen Shorts
+# P1 – neun Hook-Storyboards, ein voller Sichtungscut (nicht neun neue Shorts)
 
-**Stand 23.10.2026:** Für **jeden** der drei bestehenden Shorts liegen drei **unterschiedliche Ideen-Trigger** als eigene, sekundengenau getaktete [Konzept-Storyboards](../media/carvertical-ugc/hooks/) vor. Alle neun bestehen den **Konzept-Check** (Timing, Bildbewegungsplan, Gesicht/Zahl bis 1,5 s, Quellenverweise, Handoff zum Basisshort). **Sechs davon (V2/V3) sind inzwischen als 1,5-s-Stummtests abspielbar** – mit realem Bild-Cut bei 0,8 s; V1 bleibt ohne echte Creator-Aufnahme gesperrt. Diese stummen Roh-Experimente sind **nicht** der MP4-Preflight: echte VO/ASR, vollständige Shorts und Ausspielung fehlen. Die P1-Abnahme „Preflight 0 FAIL am fertigen Export“ ist **offen**.
+**Stand 23.10.2026:** Für **jeden** der drei bestehenden Shorts liegen drei **unterschiedliche Ideen-Trigger** als eigene, sekundengenau getaktete [Konzept-Storyboards](../media/carvertical-ugc/hooks/) vor. Alle neun bestehen den **Konzept-Check** (Timing, Bildbewegungsplan, Gesicht/Zahl bis 1,5 s, Quellenverweise, Handoff zum Basisshort). Sechs V2-/V3-Entwürfe sind als **1,5-s-Stummtests** abspielbar. Zusätzlich gibt es jetzt [einen vollen carVertical-V3-Sichtungscut, 27,20 s](../media/carvertical-ugc/out/short_carvertical_v6_v3.mp4) mit unverändertem Originalton: Nur die **ersten 45 Bildframes** wurden ersetzt, danach ist der bekannte Body zu sehen. Dieser eine volle Export hat **0 FAIL im MP4-Preflight** (15 Checks: 13 PASS, 1 WARN des alten Body-Storyboards, 1 SKIP für nicht erneut ausgeführte ASR). [Sichtungsprotokoll](P1_CV5_FULL_REVIEW.md). **Er ist kein nach Zuschauertest gekürter Gewinner und kein vollständiger V3-Neudreh**: Die geplanten Beats ab 1,5 s wurden nicht ersetzt. V1 bleibt ohne echte Creator-Aufnahmen gesperrt, andere Varianten brauchen neue VO/Timing-Abnahme. P1 über **alle neun** Varianten ist weiterhin **offen**.
 
-Die JSON-Dateien haben absichtlich `format: ugc-hook-storyboard/v1` und `beats` statt `meta/scenes`: **nicht** an `skill/engine/render.py` oder `qa_preflight.py` als fertiges Video-Storyboard übergeben. Sie sind Dreh-/Schnittentscheidungen, keine als renderfertig getarnten Screenshots. Der unveränderte Basisshort übernimmt jeweils nach `handoff_at` (cv5 5,65 s; YT 3,56 s; App 4,58 s).
+Die JSON-Dateien haben absichtlich `format: ugc-hook-storyboard/v1` und `beats` statt `meta/scenes`: **nicht** an `skill/engine/render.py` oder `qa_preflight.py` als fertiges Video-Storyboard übergeben. Sie sind Dreh-/Schnittentscheidungen, keine als renderfertig getarnten Screenshots. **Geplante** Übergabe an den Basisshort: `handoff_at` (cv5 5,65 s; YT 3,56 s; App 4,58 s). **Ausnahme:** Der jetzt gebaute CV5-V3-Sichtungscut ersetzt ausdrücklich **nur bis 1,5 s**; restliche Board-Beats sind nicht realisiert.
 
 ## Die neun Tests (0,0 s → Konter bei 0,8 s)
 
@@ -23,7 +23,7 @@ Die JSON-Dateien haben absichtlich `format: ugc-hook-storyboard/v1` und `beats` 
 
 ## Motion-First-Hook-Lab: sechs **abspielbare** Stummtests
 
-Das ist kein weiteres Polieren der 27-s-Renderengine: [`render_hook_trials.py`](../media/carvertical-ugc/tools/render_hook_trials.py) rendert ausschließlich die **ersten 45 Frames** (1,5 s) aus den V2-/V3-Boards. Zahl ab Frame 1, reale Bewegung im Bild, harter Reveal bei Frame 24 (0,8 s), anschließend sichtbarer Originalbeleg. Keine erfundene Stimme, kein KI-Gesicht, keine dekorativen Beweis-Claims. Alle sechs Clips sind **stumm**, 720×1280/30 fps und absichtlich *nicht postfertig*:
+Das ist kein weiteres Polieren der 27-s-Renderengine: [`render_hook_trials.py`](../media/carvertical-ugc/tools/render_hook_trials.py) rendert ausschließlich die **ersten 45 Frames** (1,5 s) aus den V2-/V3-Boards. Zahl bei V2 ab Frame 1, bei V3 ab dem Reveal, echte Pixelbewegung im Bild, harter Reveal bei Frame 24 (0,8 s), anschließend sichtbarer Originalbeleg. Keine erfundene Stimme, kein KI-Gesicht, keine dekorativen Beweis-Claims. Alle sechs Clips sind **stumm**, 720×1280/30 fps und absichtlich *nicht postfertig*:
 
 | carVertical | Einfach Hausen | NVIDIA / DPCcars |
 |---|---|---|
@@ -47,7 +47,26 @@ python3 media/carvertical-ugc/tools/score_hooks.py exports/*.csv --out media/car
 
 `score_hooks.py` entfernt doppelte Exporte derselben anonymen Session. Bei kleinen Stichproben meldet es **keinen Gewinner**; selbst mit genug Antworten bleibt die Rangfolge nur ein Explorationssignal, kein Viralitätsnachweis.
 
-Der Pixel-Gate dekodiert **die MP4** und prüft Frame 0, sichtbare Bewegung vor dem Cut, den Reveal sowie Bewegung danach; hier **6/6 PASS, V1 3× BLOCKED**. Ein Standbild würde FAIL liefern. **Grenze:** Die Belegquellen sind Standbilder – Pan, Zahl-Punch und Cut sind echte Pixelbewegung, aber kein gefilmter Mensch und kein Original-Bewegtbild. Ohne echten Creator-Take bzw. konkreten `/motion`-Referenzclip wird hier keine Gleichwertigkeit mit dessen Ästhetik behauptet. Das belegt *nicht* Watchtime, Creator-Emotion oder 0-FAIL-Short-Preflight. Die sechs kleinen Previews unter `hooks/previews/` sind bewusst für die Schnellansicht im Repo enthalten und jederzeit reproduzierbar; Rechte an den Quellen siehe NOTICE.md. Falls `skill/assets/fonts` fehlen, nimmt der Preview-Renderer einen lokalen Bold-Fallback (Originalfont optional über `skill/scripts/setup_fonts.sh`).
+Der Pixel-Gate dekodiert **die MP4** und prüft Frame 0, sichtbare Bewegung vor dem Cut, den Reveal sowie Bewegung danach; hier **6/6 PASS, V1 3× BLOCKED**. Ein Standbild würde FAIL liefern. **Grenze:** Die Belegquellen sind Standbilder – Pan, Zahl-Punch und Cut sind echte Pixelbewegung, aber kein gefilmter Mensch und kein Original-Bewegtbild. Ohne echten Creator-Take bzw. konkreten `/motion`-Referenzclip wird hier keine Gleichwertigkeit mit dessen Ästhetik behauptet. Das belegt *nicht* Watchtime oder Creator-Emotion; nur der separate volle V3-Sichtungscut hat jetzt einen eigenen 0-FAIL-MP4-Preflight. Die sechs kleinen Previews unter `hooks/previews/` sind bewusst für die Schnellansicht im Repo enthalten und jederzeit reproduzierbar; Rechte an den Quellen siehe NOTICE.md. Falls `skill/assets/fonts` fehlen, nimmt der Preview-Renderer einen lokalen Bold-Fallback (Originalfont optional über `skill/scripts/setup_fonts.sh`).
+
+## Voller carVertical-V3-Sichtungscut (kein Sieger, kein V1)
+
+[MP4 direkt öffnen](../media/carvertical-ugc/out/short_carvertical_v6_v3.mp4) · [Produktions-Rezept / SHA-256](../media/carvertical-ugc/out/short_carvertical_v6_v3.provenance.json) · [kritische Bewertung](P1_CV5_FULL_REVIEW.md)
+
+[`build_cv5_v3_full.py`](../media/carvertical-ugc/tools/build_cv5_v3_full.py) erzeugt den **1,5-s-Hook in 1080×1920** neu, nimmt im Original ab **Frame 45** den alten Body und kopiert **alle 1.276 AAC-Pakete der Originaltonspur bitidentisch**. Er prüft 816 dekodierte Frames, 27,20 s, Audio-Payload und Zeitstempel vor dem atomaren Export. Bei **0,8 s (Frame 24)** schlägt die redaktionelle Frage „UNFALLFREI?“ in das echte Reportbild mit **22.501–25.000 € kalkulierten Kosten** um. Die Original-VO sagt ab 1,06 s „über 20.000 Euro Schaden“ – das ist gerundet, keine neue Sprecherzeile. **Kein Verkäufer-Zitat** wird behauptet. Die Board-Beats ab 1,5 bis 5,65 s bleiben **Konzept**, nicht Teil dieses Schnitts.
+
+```bash
+.venv/bin/pip install -r media/carvertical-ugc/hooks/requirements.txt
+.venv/bin/python media/carvertical-ugc/tools/build_cv5_v3_full.py
+.venv/bin/python skill/scripts/qa_preflight.py \
+  media/carvertical-ugc/out/short_carvertical_v6_v3.mp4 \
+  --storyboard media/carvertical-ugc/storyboard_cv5.json \
+  --brief media/carvertical-ugc/brief_cv5.json --asr \
+  --json media/carvertical-ugc/qa/cv5_v3_full_preflight.json
+.venv/bin/python -m unittest discover -s tests -v
+```
+
+Gemessen: **15 Checks, 0 FAIL** (13 PASS, 1 WARN: bereits vorhandener Headline-Pop im Body, 1 SKIP: ASR mangels Backend/Credentials nicht erneut ausgeführt); −14,1 LUFS / −1,3 dBTP; voller 45-Frame-Bewegungs-Gate ebenfalls **PASS** (vor Cut 8,83, Cut 44,1, danach 10,08 mittlere Pixeldifferenz). Der Preflight validiert **den Original-Body-Storyboard-Rest**, aber nicht ein neues renderfähiges Storyboard für die 1,5 s Sonderanimation; diese wurde stattdessen am exportierten MP4 und am echten Beleg geprüft. `qa/`-Messdateien bleiben bewusst lokal/ignoriert. Der Export ist zum Anschauen/Verwerfen/Verbessern da, **nicht für blindes Posting**: unabhängige Hör-/ASR-Prüfung, Creator-Material und Panel fehlen.
 
 ## Heute Abend schnell testen (ohne Exportversprechen)
 
@@ -66,4 +85,4 @@ python3 -m unittest discover -s tests -v
 python3 media/carvertical-ugc/tools/check_hook_storyboards.py --strict-assets
 ```
 
-**Offen für P1:** 3 echte Creator-Takes für V1; neue VO/ASR-Timings für **die Gewinner**; renderfähige Produktions-Storyboards, vollständiger Export + MP4-Preflight 0 FAIL; Sichtprüfung der tatsächlichen ersten 45 Frames. Die sechs Stummtests belegen nur visuellen Ansatz/Bewegung, keine Retention. Kein v1 mit Foto-/KI-Ersatz „grün“ melden. Andere Prioritäten (Retention, Sound, Series) erst nach dem Hook-Ideentest anfassen.
+**Offen für P1:** 3 echte Creator-Takes für V1; echte Blindtest-Antworten; neue VO/ASR-Timings für **die Gewinner**; renderfähige Produktions-Storyboards und vollständige Exporte **der übrigen Sieger-Varianten** mit eigenem MP4-Preflight 0 FAIL; unabhängige Hör- und Frame-Sichtung vor Posting. Für den einen CV5-V3-Sichtungscut sind 45 echte Export-Frames und 0-FAIL-MP4-Preflight geprüft, aber weder ASR erneut gemessen noch die restlichen geplanten 1,5–5,65 s produziert. Die sechs Stummtests belegen nur visuellen Ansatz/Bewegung, keine Retention. Kein V1 mit Foto-/KI-Ersatz „grün“ melden. Andere Prioritäten (Retention, Sound, Series) erst nach dem Hook-Ideentest anfassen.
