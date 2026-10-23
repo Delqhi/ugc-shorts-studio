@@ -1,0 +1,81 @@
+{
+  "format": "ugc-hook-storyboard/v1",
+  "short": "app",
+  "variant": "v3",
+  "trigger": "contradiction_flash",
+  "baseline_storyboard": "storyboard_app.json",
+  "brief": "brief_app.json",
+  "hypothesis": "Der reale Statuswechsel „vereinbart“ zu „bezahlt“ auf ein und demselben Beleg widerlegt die offene Frage „NUR VEREINBART?“.",
+  "truth_guard": "Keine fingierte Chat-Nachricht, kein fremder Kunde: Frage ohne Absender/Avatar; beide Zustände stehen auf demselben Eigenprodukt-Beleg.",
+  "handoff_at": 4.58,
+  "handoff_to": "BEWEIS 02",
+  "beats": [
+    {
+      "start": 0,
+      "end": 0.8,
+      "images": [
+        "app/s1_receipt.png"
+      ],
+      "visual": "Ausschnitt „Vereinbarter Auftragsbetrag 150,90 €“ mit neutraler Frage-Bubble „NUR VEREINBART?“.",
+      "motion": "swipe: Frage bewegt sich über die obere Belegzeile.",
+      "on_screen": [
+        {
+          "value": "NUR VEREINBART?",
+          "role": "editorial_question"
+        }
+      ],
+      "vo_cue": "Nur vereinbart?",
+      "brief_claims": [
+        "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €"
+      ]
+    },
+    {
+      "start": 0.8,
+      "end": 1.5,
+      "images": [
+        "app/s1_receipt.png"
+      ],
+      "visual": "Smash-Cut im GLEICHEN Beleg zur unteren Zeile „Bezahlt 150,90 €“; Zahl gut lesbar.",
+      "motion": "hard_cut: bei 0,80 s zur Bezahlt-Zeile.",
+      "on_screen": [
+        {
+          "value": "150,90 €",
+          "role": "verified_claim",
+          "brief_claim": "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €"
+        }
+      ],
+      "vo_cue": "Bezahlt.",
+      "brief_claims": [
+        "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €"
+      ]
+    },
+    {
+      "start": 1.5,
+      "end": 2.8,
+      "images": [
+        "app/s1_receipt.png"
+      ],
+      "visual": "Beide Zeilen in einem Crop zeigen: vereinbart oben, bezahlt unten.",
+      "motion": "pull_out: vom Betrag auf beide Zeilen.",
+      "on_screen": [],
+      "vo_cue": "Der Betrag: 150 Euro 90.",
+      "brief_claims": [
+        "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €"
+      ]
+    },
+    {
+      "start": 2.8,
+      "end": 4.58,
+      "images": [
+        "app/s1_receipt.png"
+      ],
+      "visual": "Zur vollen Belegansicht zurück, bevor die Basisszene „Team“ einsetzt.",
+      "motion": "pull_out: vom Crop zum Beleg.",
+      "on_screen": [],
+      "vo_cue": "Das steht auf dem Beleg.",
+      "brief_claims": [
+        "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €"
+      ]
+    }
+  ]
+}

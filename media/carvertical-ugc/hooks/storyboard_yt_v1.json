@@ -1,0 +1,65 @@
+{
+  "format": "ugc-hook-storyboard/v1",
+  "short": "yt",
+  "variant": "v1",
+  "trigger": "face_accusation",
+  "baseline_storyboard": "storyboard_yt.json",
+  "brief": "brief_yt.json",
+  "hypothesis": "Echte Creator-Reaktion vor einem belegten Bühnenmoment wirkt menschlicher als nur ein Videoframe.",
+  "truth_guard": "Creator spielt keine Augenzeugenrolle und behauptet nicht, selbst auf der NVIDIA-Bühne gewesen zu sein. Jensen ist Quellperson, nicht unser Creator.",
+  "handoff_at": 3.56,
+  "handoff_to": "BEWEIS 02",
+  "beats": [
+    {
+      "start": 0,
+      "end": 0.8,
+      "images": [
+        "yt/yt_12.png"
+      ],
+      "visual": "Echter Creator schaut direkt in die Kamera, hält das Quellbild auf dem Smartphone hoch.",
+      "motion": "handheld: Blickwechsel von Kamera zum Smartphone.",
+      "on_screen": [],
+      "vo_cue": "Spricht er",
+      "brief_claims": [],
+      "face": {
+        "kind": "real_creator",
+        "asset": "hooks/raw/yt_creator.mp4"
+      },
+      "source_time": "0:12"
+    },
+    {
+      "start": 0.8,
+      "end": 1.5,
+      "images": [
+        "yt/yt_12.png"
+      ],
+      "visual": "Harter Schnitt auf Jensen mit Roboter im Originalframe; Quellzeit 0:12, kein nachgestelltes Bühnenmaterial.",
+      "motion": "hard_cut: Creator raus, Originalbild rein.",
+      "on_screen": [],
+      "vo_cue": "mit dem Roboter?",
+      "brief_claims": [
+        "you have a camera. oh yeah, don't trip"
+      ],
+      "face": {
+        "kind": "source_person",
+        "asset": "yt/yt_12.png"
+      },
+      "source_time": "0:12"
+    },
+    {
+      "start": 1.5,
+      "end": 3.56,
+      "images": [
+        "yt/yt_12.png"
+      ],
+      "visual": "Im Originalbild zum kleinen Roboter schwenken; tatsächliche Quellzeile hörbar statt frei erfundener Antwort.",
+      "motion": "push_in: vom Gesicht zum Roboter.",
+      "on_screen": [],
+      "vo_cue": "Hör zu: „Don’t trip.“",
+      "brief_claims": [
+        "you have a camera. oh yeah, don't trip"
+      ],
+      "source_time": "0:12"
+    }
+  ]
+}

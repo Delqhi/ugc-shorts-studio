@@ -1,0 +1,87 @@
+{
+  "format": "ugc-hook-storyboard/v1",
+  "short": "cv5",
+  "variant": "v3",
+  "trigger": "contradiction_flash",
+  "baseline_storyboard": "storyboard_cv5.json",
+  "brief": "brief_cv5.json",
+  "hypothesis": "Die offene Frage „Unfallfrei?“ vor einem belegten Schadensbild erzeugt einen sofortigen Widerspruch ohne falsches Verkäufer-Zitat.",
+  "truth_guard": "Frage-Bubble ohne Absender/Avatar, kein als echt ausgegebener Verkäufer-Chat. Für „Verkäufer sagt Unfallfrei“ wäre ein echtes Inserat oder O-Ton nötig.",
+  "handoff_at": 5.65,
+  "handoff_to": "BEWEIS 02 · KILOMETERSTAND",
+  "beats": [
+    {
+      "start": 0,
+      "end": 0.8,
+      "images": [
+        "m/v4_wreck.png"
+      ],
+      "visual": "Käuferfrage „UNFALLFREI?“ als neutrale Bubble; Unfallfoto noch stark vergrößert und unscharf.",
+      "motion": "swipe: Bubble zieht auf; Hintergrund bewegt sich leicht.",
+      "on_screen": [
+        {
+          "value": "UNFALLFREI?",
+          "role": "editorial_question"
+        }
+      ],
+      "vo_cue": "Originalton 0,00–0,70: „Kein Unfall,“; die sichtbare Frage „UNFALLFREI?“ ist redaktionell, kein Verkäufer-Zitat.",
+      "brief_claims": []
+    },
+    {
+      "start": 0.8,
+      "end": 1.5,
+      "images": [
+        "m/v4_wreck.png",
+        "m/cost.png"
+      ],
+      "visual": "Smash-Cut auf beschädigtes Auto + echte Report-Zeile „Kalkulierte Kosten“; Kosten als einzige Headline.",
+      "motion": "hard_cut: bei 0,80 s zum Foto und Report.",
+      "on_screen": [
+        {
+          "value": "22.501 – 25.000 €",
+          "role": "verified_claim",
+          "brief_claim": "22.501 – 25.000 €"
+        }
+      ],
+      "vo_cue": "Originalton ab 1,06: „über 20.000 Euro Schaden.“ Der sichtbare Report präzisiert die gerundete VO-Angabe.",
+      "brief_claims": [
+        "Kein Unfall? Über 20.000 Euro Schaden",
+        "22.501 – 25.000 €"
+      ]
+    },
+    {
+      "start": 1.5,
+      "end": 3.2,
+      "images": [
+        "m/v4_wreck.png"
+      ],
+      "visual": "Nur das Unfallfoto mit schnellem Push-in, nicht zusätzliches Typo-Ballett.",
+      "motion": "push_in: auf dokumentierten Schaden.",
+      "on_screen": [],
+      "vo_cue": "Der Bericht zeigt einen Schaden.",
+      "brief_claims": [
+        "Kein Unfall? Über 20.000 Euro Schaden"
+      ]
+    },
+    {
+      "start": 3.2,
+      "end": 5.65,
+      "images": [
+        "m/cost.png"
+      ],
+      "visual": "Kalkulierte Kosten im Report zeigen; kein fiktiver Verkäufer im Bild.",
+      "motion": "hard_cut: vom Foto zur Reportstelle.",
+      "on_screen": [
+        {
+          "value": "22.501 – 25.000 €",
+          "role": "verified_claim",
+          "brief_claim": "22.501 – 25.000 €"
+        }
+      ],
+      "vo_cue": "Kalkulierte Reparaturkosten: bis 25.000 Euro.",
+      "brief_claims": [
+        "22.501 – 25.000 €"
+      ]
+    }
+  ]
+}

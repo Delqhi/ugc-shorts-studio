@@ -1,0 +1,69 @@
+{
+  "format": "ugc-hook-storyboard/v1",
+  "short": "yt",
+  "variant": "v2",
+  "trigger": "one_number",
+  "baseline_storyboard": "storyboard_yt.json",
+  "brief": "brief_yt.json",
+  "hypothesis": "Die im Originalframe nachzählbaren vier kleinen Roboter sind ein visueller Zahl-Köder.",
+  "truth_guard": "4 ist Bildzählung, keine Behauptung über Gesamtzahl aller Bühnenroboter; die frühere 20-cm-Zahl ist hier NICHT belegt.",
+  "handoff_at": 3.56,
+  "handoff_to": "BEWEIS 02",
+  "beats": [
+    {
+      "start": 0,
+      "end": 0.8,
+      "images": [
+        "yt/yt_158.png"
+      ],
+      "visual": "Nur „4“ im ersten Frame; Quellframe als unleserlich unscharfer Hintergrund, keine Quote, kein Timestamp-Label.",
+      "motion": "scale_pulse: Vier ist ab Frame 1 sichtbar und federt kurz.",
+      "on_screen": [
+        {
+          "value": "4",
+          "role": "verified_claim",
+          "brief_claim": "4 kleine Roboter im Bühnenbild (Bildzählung, nicht gesprochen)"
+        }
+      ],
+      "vo_cue": "Vier.",
+      "brief_claims": [
+        "4 kleine Roboter im Bühnenbild (Bildzählung, nicht gesprochen)"
+      ],
+      "source_time": "2:32"
+    },
+    {
+      "start": 0.8,
+      "end": 1.5,
+      "images": [
+        "yt/yt_158.png"
+      ],
+      "visual": "Originalframe 2:32 klar: vier kleine Roboter unten auf der Bühne. Bei Sichtprüfung einzeln nachzählen.",
+      "motion": "focus_reveal: Quellframe scharf, Kamera fährt über die vier Figuren.",
+      "on_screen": [],
+      "vo_cue": "Roboter.",
+      "brief_claims": [
+        "4 kleine Roboter im Bühnenbild (Bildzählung, nicht gesprochen)"
+      ],
+      "source_time": "2:32"
+    },
+    {
+      "start": 1.5,
+      "end": 3.56,
+      "images": [
+        "yt/yt_12.png"
+      ],
+      "visual": "Schnitt zur Szene, in der Huang mit dem Roboter spricht; Zeitstempel 0:12 erst nach Zahlen-Hook.",
+      "motion": "hard_cut: 2:32 zu 0:12, Quellzeiten bleiben sichtbar.",
+      "on_screen": [],
+      "vo_cue": "Huang spricht mit einem davon.",
+      "brief_claims": [
+        "you have a camera. oh yeah, don't trip"
+      ],
+      "face": {
+        "kind": "source_person",
+        "asset": "yt/yt_12.png"
+      },
+      "source_time": "0:12"
+    }
+  ]
+}

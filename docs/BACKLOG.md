@@ -12,16 +12,18 @@ des gleichen Typo-Konzepts:
 - **V1 „Gesicht + Vorwurf":** echter Creator vor der Kamera (Smartphone-Requisite reicht) über dem
   Unfallfoto mit harter Eröffnungsfrage. In der Kategorie Gebrauchtwagen kümmert ein Gesicht das
   Autoplay-Sound-Problem; reine Typo-Frames werden auf Silent gescrollt.
-- **V2 „Ein-Zahl-Hammer":** die Zahl füllt das Bild („48 %"), die Stimme sagt nur „Das hat diesen
-  Passat Wert gekostet." Kein anderes Textelement im ersten Frame, keine Etiketten.
-- **V3 „Widerspruch-Blitz":** 0,0 s Verkäufer-Statement („Unfallfrei" als Chat-Bubble) → 0,8 s
-  Schnitt auf den Report. Der Widerspruch wird **nicht** erklärt — die Kluft macht die Spannung.
+- **V2 „Ein-Zahl-Hammer":** die Zahl füllt das Bild („48 %"), die noch aufzunehmende Stimme
+  erklärt **korrekt**: „Kalkulierte Reparaturkosten: 48 % des damaligen Fahrzeugwerts.“
+  **Nicht** als 48 % Wertverlust ausgeben. Kein anderes Textelement im ersten Frame, keine Etiketten.
+- **V3 „Widerspruch-Blitz":** 0,0 s offene Frage („Unfallfrei?“ **ohne** fiktiven Verkäufer-/Chat-Absender) → 0,8 s Schnitt auf den Report. Der Widerspruch wird **nicht** erklärt — die Kluft macht die Spannung. Ein echtes Verkäufer-Statement braucht einen Originalbeleg, der hier fehlt.
 
 Akzeptanz: Hook-Varianten liegen als eigene Storyboards, Preflight 0 FAIL, und die **ersten 1,5 s
 enthalten Bewegung plus mindestens ein Gesichts- oder Zahlenelement**.
 
 Datei-Zeiger: `media/carvertical-ugc/storyboard_cv5.json` (Szene 1 = `danger`), Engine-Hook:
 `skill/engine/render.py` → `scene_danger`. Der Stempel ist entkoppelt (`stamp: null` allowed).
+
+**Zwischenstand 23.10.2026:** [9/9 Konzept-Storyboards + Testplan](P1_HOOKS.md) erstellt. Sechs V2/V3-Hooks als **stumme 1,5-s-MP4-Previews** gerendert: Pixel-Gate für Bewegung/Reveals 6/6 PASS; Blindtest gegen alte Intros im Hook Lab vorbereitet, aber **keine Teilnehmenden-Ergebnisse**. Dazu [ein vollständiger carVertical-V3-Sichtungscut](../media/carvertical-ugc/out/short_carvertical_v6_v3.mp4) mit 0-FAIL-MP4-Preflight (1 WARN, 1 ASR-SKIP). Nur 0–1,5 s neu; Originalton bitidentisch, danach alter Body. [Kritische Sichtung](P1_CV5_FULL_REVIEW.md): Bruch bei 1,5 s, keine Gleichwertigkeit mit `/motion`. **P1 nicht abgenommen:** V1 braucht drei echte Creator-Takes; der Sieger muss noch im Panel ermittelt und mit passendem VO/ASR sowie eigenem Full-Storyboard und Preflight ausgearbeitet werden. Preview-Gate ersetzt keinen 0-FAIL-Preflight am fertigen Short.
 
 ## Priorität 2 — Retention-Mathematik vor dem Render prüfen
 

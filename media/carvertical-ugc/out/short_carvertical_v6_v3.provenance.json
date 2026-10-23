@@ -1,0 +1,18 @@
+{
+  "format": "screening-cut/v1",
+  "source": "out/short_carvertical_v5.mp4",
+  "source_sha256": "a45065b1837b138cbd67d5e26e54b78bf3e6dfbf5d44f5d9433e29f251f8366f",
+  "preview_board": "hooks/storyboard_cv5_v3.json",
+  "hook_frames": 45,
+  "handoff_frame": 45,
+  "body_from": "original frame 45; visual frames are re-encoded",
+  "audio": "original AAC packets copied bit-identically, no new VO/ASR",
+  "audio_packets": 1276,
+  "audio_payload_sha256": "b56089e11e04e524fe8eff9687eb5cb7bdcb95cd0e74a8fdf4096c16041564ad",
+  "first_audio_pts_seconds": -0.021333333333333333,
+  "video_frames": 816,
+  "duration_seconds": 27.2,
+  "output": "out/short_carvertical_v6_v3.mp4",
+  "output_sha256": "97e7aac1339252709f4eb73d643ddd0d3ccfece783ff1c9f764c69a73a6e3e9c",
+  "note": "V3 screening candidate, not winner; storyboard_cv5.json describes unchanged body, not edited opening."
+}

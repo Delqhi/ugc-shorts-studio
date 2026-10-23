@@ -32,6 +32,12 @@ QA-Sheets (Einzelbilder pro Sekunde) liegen je Short unter `out/qa/<name>/sheet_
 
 Genau das steht als Arbeit in [docs/BACKLOG.md](docs/BACKLOG.md) — mit konkreten Akzeptanzkriterien und Dateizeigern.
 
+## P1: Hook-Ideentests + ein voller Sichtungscut
+
+Neun [Hook-Storyboards mit Testanleitung](docs/P1_HOOKS.md) liegen vor: je Short ein echter Creator-Take, ein belegter Ein-Zahl-Hook und ein Widerspruchs-Blitz. Der [Konzept-Check](media/carvertical-ugc/tools/check_hook_storyboards.py) validiert 9/9 Timing-/Beleg-Pläne. **Sechs Stummtests** (V2/V3) sind als 1,5-s-MP4s reproduzierbar; das [Hook Lab](media/carvertical-ugc/hooks/review.html) stellt sie blind gegen die drei alten Intros. Der [Pixel-Gate](media/carvertical-ugc/tools/check_hook_previews.py) prüft Bewegung im encodierten Video (6/6 PASS).
+
+**Jetzt vollständiges Video zum Anschauen:** [carVertical V3 · 27,20 s](media/carvertical-ugc/out/short_carvertical_v6_v3.mp4) mit redaktionellem „UNFALLFREI?“-Hook, echtem Report-Reveal bei 0,8 s und **bitidentischer Originaltonspur**. Nur die ersten 1,5 s sind neu geschnitten; ab 1,5 s bleibt der alte Body. Der MP4-Preflight meldet **15 Checks, 0 FAIL** (1 bestehende WARN, **ASR SKIP**), nicht etwa eine neue VO-/Creator-/Retention-Freigabe. [Kritische Bild-/Tonbewertung und offene Punkte](docs/P1_CV5_FULL_REVIEW.md) · [Reproduzierbarer Export](media/carvertical-ugc/tools/build_cv5_v3_full.py). P1 über alle Varianten ist **nicht abgeschlossen**; insbesondere echte V1-Takes und ein Blindtest fehlen.
+
 ## Quick-Start (Render eines Shorts)
 
 ```bash

@@ -38,6 +38,12 @@ EDGE_TOL = 4             # px, die ein Glyph höchstens an den Rand darf
 
 FFMPEG = next((p for p in (shutil.which("ffmpeg"), "/usr/local/bin/ffmpeg",
                            "/opt/homebrew/bin/ffmpeg") if p and Path(p).exists()), None)
+if FFMPEG is None:
+    try:
+        import imageio_ffmpeg
+        FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError:
+        pass
 FFPROBE = next((p for p in (shutil.which("ffprobe"), "/usr/local/bin/ffprobe",
                             "/opt/homebrew/bin/ffprobe") if p and Path(p).exists()), None)
 
@@ -88,11 +94,38 @@ def run(cmd: list[str]) -> tuple[int, str, str]:
 # MP4 checks
 # --------------------------------------------------------------------------- #
 def probe(path: Path) -> dict:
-    code, out, err = run([FFPROBE, "-v", "error", "-show_streams", "-show_format",
-                          "-of", "json", str(path)])
-    if code != 0:
-        raise RuntimeError(f"ffprobe failed: {err.strip()[:300]}")
-    return json.loads(out)
+    """ffprobe bevorzugen, sonst dieselben benötigten Streamdaten via PyAV lesen.
+
+    imageio-ffmpeg liefert ein FFmpeg-Binary, aber kein ffprobe. Ein fehlender
+    Probe-Decoder ist kein Grund, das MP4-Gate stillschweigend zu überspringen.
+    """
+    if FFPROBE:
+        code, out, err = run([FFPROBE, "-v", "error", "-show_streams", "-show_format",
+                              "-of", "json", str(path)])
+        if code != 0:
+            raise RuntimeError(f"ffprobe failed: {err.strip()[:300]}")
+        return json.loads(out)
+
+    try:
+        import av
+    except ImportError as exc:
+        raise RuntimeError("ffprobe fehlt; als Alternative PyAV installieren (pip install av)") from exc
+    with av.open(str(path)) as container:
+        streams = []
+        for stream in container.streams:
+            item = {"codec_type": stream.type, "codec_name": stream.codec_context.name}
+            if stream.type == "video":
+                rate = stream.average_rate
+                item.update(width=stream.codec_context.width, height=stream.codec_context.height,
+                            r_frame_rate=f"{rate.numerator}/{rate.denominator}" if rate else "0/1")
+            elif stream.type == "audio":
+                item["channels"] = stream.codec_context.channels
+            if stream.duration is not None:
+                item["duration"] = float(stream.duration * stream.time_base)
+            streams.append(item)
+        duration = float(container.duration / av.time_base) if container.duration is not None else max(
+            (s.get("duration", 0) for s in streams), default=0)
+        return {"streams": streams, "format": {"duration": duration}}
 
 
 def check_container(info: dict, rep: Report, min_d: float, max_d: float) -> None:
@@ -462,8 +495,8 @@ def main(argv: list[str] | None = None) -> int:
 
     if not args.video and not args.storyboard:
         ap.error("mindestens eine MP4 oder ein Storyboard angeben")
-    if (args.video or args.storyboard) and not FFMPEG:
-        ap.error("ffmpeg nicht gefunden")
+    if args.video and not FFMPEG:
+        ap.error("ffmpeg nicht gefunden (System-ffmpeg oder pip install imageio-ffmpeg)")
 
     rep = Report()
     label = args.video.stem if args.video else "storyboard"
@@ -473,7 +506,10 @@ def main(argv: list[str] | None = None) -> int:
     if args.video:
         if not args.video.exists():
             ap.error(f"nicht gefunden: {args.video}")
-        info = probe(args.video)
+        try:
+            info = probe(args.video)
+        except (RuntimeError, OSError) as exc:
+            ap.error(str(exc))
         check_container(info, rep, args.min_duration, args.max_duration)
         check_loudness(args.video, rep)
         check_first_frame(args.video, rep, tmp)

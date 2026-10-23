@@ -1,0 +1,82 @@
+{
+  "format": "ugc-hook-storyboard/v1",
+  "short": "app",
+  "variant": "v1",
+  "trigger": "face_accusation",
+  "baseline_storyboard": "storyboard_app.json",
+  "brief": "brief_app.json",
+  "hypothesis": "Ein Creator stellt die Zahlungsfrage direkt in die Kamera und zeigt dann statt Marketingtext den echten Beleg.",
+  "truth_guard": "Kein fingierter Kunde/Handwerker, keine Aussage „sofort ausgezahlt“: der Beleg zeigt einen bezahlten Betrag, nicht die Zahlungsdauer.",
+  "handoff_at": 4.58,
+  "handoff_to": "BEWEIS 02",
+  "beats": [
+    {
+      "start": 0,
+      "end": 0.8,
+      "images": [
+        "app/s1_receipt.png"
+      ],
+      "visual": "Echter Creator mit Smartphone und offenem Eigenprodukt-Beleg; Blickkontakt, keine Schauspieler-Bewertung.",
+      "motion": "handheld: Creator dreht das Telefon zur Kamera.",
+      "on_screen": [],
+      "vo_cue": "Wo",
+      "brief_claims": [],
+      "face": {
+        "kind": "real_creator",
+        "asset": "hooks/raw/app_creator.mp4"
+      }
+    },
+    {
+      "start": 0.8,
+      "end": 1.5,
+      "images": [
+        "app/s1_receipt.png"
+      ],
+      "visual": "Schwenk zur echten Belegzeile „Bezahlt 150,90 €“ auf dem Telefon.",
+      "motion": "reframe: Augen zu dokumentierter Zahlungszeile.",
+      "on_screen": [],
+      "vo_cue": "ist die Zahlung?",
+      "brief_claims": [
+        "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €"
+      ],
+      "face": {
+        "kind": "real_creator",
+        "asset": "hooks/raw/app_creator.mp4"
+      }
+    },
+    {
+      "start": 1.5,
+      "end": 2.8,
+      "images": [
+        "app/s1_receipt.png"
+      ],
+      "visual": "Scharfer Ausschnitt des Screenshots: „Bezahlt“ lesbar, Betrag nicht abgeschnitten.",
+      "motion": "hard_cut: Telefon zu Screen-Crop.",
+      "on_screen": [
+        {
+          "value": "150,90 €",
+          "role": "verified_claim",
+          "brief_claim": "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €"
+        }
+      ],
+      "vo_cue": "Hier. Auf dem Beleg.",
+      "brief_claims": [
+        "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €"
+      ]
+    },
+    {
+      "start": 2.8,
+      "end": 4.58,
+      "images": [
+        "app/s1_receipt.png"
+      ],
+      "visual": "Den Unterschied zwischen „vereinbart“ und „bezahlt“ im gleichen Beleg zeigen.",
+      "motion": "pan: von vereinbart auf bezahlt.",
+      "on_screen": [],
+      "vo_cue": "Da steht: bezahlt, 150 Euro 90.",
+      "brief_claims": [
+        "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €"
+      ]
+    }
+  ]
+}
