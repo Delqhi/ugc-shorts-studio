@@ -32,6 +32,10 @@ QA-Sheets (Einzelbilder pro Sekunde) liegen je Short unter `out/qa/<name>/sheet_
 
 Genau das steht als Arbeit in [docs/BACKLOG.md](docs/BACKLOG.md) — mit konkreten Akzeptanzkriterien und Dateizeigern.
 
+## P1: Hook-Ideentests (keine neuen *fertigen* Shorts)
+
+Neun [Hook-Storyboards mit Testanleitung](docs/P1_HOOKS.md) liegen vor: je Short ein echter Creator-Take, ein belegter Ein-Zahl-Hook und ein Widerspruchs-Blitz. Der [Konzept-Check](media/carvertical-ugc/tools/check_hook_storyboards.py) validiert 9/9 Timing-/Beleg-Pläne. **Sechs motion-first Stummtests** (V2/V3) sind als 1,5-s-MP4s reproduzierbar; das [Hook Lab](media/carvertical-ugc/hooks/review.html) stellt sie in einem Blindtest gegen die drei alten Intros. Der [Pixel-Gate](media/carvertical-ugc/tools/check_hook_previews.py) prüft tatsächliche Bewegung im encodierten Video (6/6 PASS). **Nur die drei bisherigen *vollen* Shorts haben den offiziellen MP4-Preflight bestanden**; für neue Varianten fehlen echte Creator-Aufnahmen und neue VO/ASR-Timings. Keine Vorschau mit einer Export-Freigabe oder Viralitätsgarantie verwechseln.
+
 ## Quick-Start (Render eines Shorts)
 
 ```bash

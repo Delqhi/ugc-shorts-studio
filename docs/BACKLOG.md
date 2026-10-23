@@ -23,6 +23,8 @@ enthalten Bewegung plus mindestens ein Gesichts- oder Zahlenelement**.
 Datei-Zeiger: `media/carvertical-ugc/storyboard_cv5.json` (Szene 1 = `danger`), Engine-Hook:
 `skill/engine/render.py` → `scene_danger`. Der Stempel ist entkoppelt (`stamp: null` allowed).
 
+**Zwischenstand 23.10.2026:** [9/9 Konzept-Storyboards + Testplan](P1_HOOKS.md) erstellt. Sechs V2/V3-Hooks als **stumme 1,5-s-MP4-Previews** gerendert: Pixel-Gate für echte Bewegung/Reveals im Export 6/6 PASS; Blindtest gegen alte Intros im Hook Lab. **P1 nicht abgenommen:** Für V1 fehlen drei echte Creator-Takes; für den Gewinner fehlen neue VO/ASR-Timings, voller Render und offizieller MP4-Preflight. Der Preview-Pixel-Gate ersetzt ausdrücklich *nicht* 0-FAIL-Preflight am fertigen Short.
+
 ## Priorität 2 — Retention-Mathematik vor dem Render prüfen
 
 Vor jedem Render: in den ersten 10 s mindestens **3 Szenenwechsel** erzwingen (aktuell cv5: 2 in

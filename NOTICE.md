@@ -10,5 +10,7 @@ Diese Repo enthält Material, das **nur für die Weiterentwicklung dieser Shorts
 | `media/carvertical-ugc/assets`→`skill/assets/fonts/*` | Anton, Montserrat ExtraBold | SIL Open Font License, frei |
 | `media/carvertical-ugc/music/641196_10862398-hq.mp3` | Pixabay-Track (CC0-ähnliche Pixabay-Lizenz) | frei, Trekkredit erwünscht |
 | `media/carvertical-ugc/out/*.mp4` | Die fertigen Shorts | Für TikTok/Reels/Shorts der eigenen Kampagnen-Accounts produziert |
+| `media/carvertical-ugc/hooks/previews/*.mp4` | Stumme 1,5-s-Ideentests aus obigen Belegbildern | **Keine fertigen Posts**; gleiche eingeschränkte Rechte wie die jeweilige Quelle, nur interne Kampagnenentwicklung |
+| `media/carvertical-ugc/hooks/raw/` | Mögliche echte Creator-Takes (nicht versioniert) | Nur mit Einwilligung/Rechteklärung verwenden; kein KI-/Stock-Gesicht als echte Creator-Aufnahme ausgeben |
 
 **Kurz:** Code frei (MIT), eigene Assets frei, Quellmedien nur im Kampagnenkontext.

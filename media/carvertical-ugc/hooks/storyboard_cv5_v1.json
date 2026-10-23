@@ -1,0 +1,82 @@
+{
+  "format": "ugc-hook-storyboard/v1",
+  "short": "cv5",
+  "variant": "v1",
+  "trigger": "face_accusation",
+  "baseline_storyboard": "storyboard_cv5.json",
+  "brief": "brief_cv5.json",
+  "hypothesis": "Blickkontakt + echte Reaktion auf das Unfallfoto stoppt eher als ein Fototitel.",
+  "truth_guard": "Keine Aussage eines konkreten Verkäufers; „unfallfrei?“ ist eine Frage. Foto stammt aus einem Musterbericht, nicht aus einem echten Kaufgespräch.",
+  "handoff_at": 5.65,
+  "handoff_to": "BEWEIS 02 · KILOMETERSTAND",
+  "beats": [
+    {
+      "start": 0,
+      "end": 0.8,
+      "images": [
+        "m/v4_wreck.png"
+      ],
+      "visual": "Echter Creator blickt in die Kamera; das Unfallfoto ist hinter seiner Schulter sichtbar, Smartphone in der Hand.",
+      "motion": "handheld: Creator hebt das Smartphone ins Bild; kein statischer PIP.",
+      "on_screen": [],
+      "vo_cue": "Unfallfrei?",
+      "brief_claims": [],
+      "face": {
+        "kind": "real_creator",
+        "asset": "hooks/raw/cv5_creator.mp4"
+      }
+    },
+    {
+      "start": 0.8,
+      "end": 1.5,
+      "images": [
+        "m/v4_wreck.png"
+      ],
+      "visual": "Creator rückt das Foto ins Bild, zeigt mit dem Finger auf das beschädigte Rad.",
+      "motion": "reframe: schneller Schwenk von Augen auf Foto.",
+      "on_screen": [],
+      "vo_cue": "Glaubst du das?",
+      "brief_claims": [
+        "Kein Unfall? Über 20.000 Euro Schaden"
+      ],
+      "face": {
+        "kind": "real_creator",
+        "asset": "hooks/raw/cv5_creator.mp4"
+      }
+    },
+    {
+      "start": 1.5,
+      "end": 3.2,
+      "images": [
+        "m/v4_wreck.png"
+      ],
+      "visual": "Foto voll im Bild; sichtbarer Push-in auf den Schaden. Kein erfundenes Inserat.",
+      "motion": "push_in: 5 % auf das dokumentierte Foto.",
+      "on_screen": [],
+      "vo_cue": "Dieses Foto ist aus dem Musterbericht.",
+      "brief_claims": [
+        "Kein Unfall? Über 20.000 Euro Schaden"
+      ]
+    },
+    {
+      "start": 3.2,
+      "end": 5.65,
+      "images": [
+        "m/cost.png"
+      ],
+      "visual": "Auf den Report schwenken; den Bereich „Kalkulierte Kosten“ exakt markieren.",
+      "motion": "hard_cut: vom Foto zu den kalkulierten Kosten.",
+      "on_screen": [
+        {
+          "value": "22.501 – 25.000 €",
+          "role": "verified_claim",
+          "brief_claim": "22.501 – 25.000 €"
+        }
+      ],
+      "vo_cue": "Bis zu 25.000 Euro kalkulierte Reparaturkosten.",
+      "brief_claims": [
+        "22.501 – 25.000 €"
+      ]
+    }
+  ]
+}

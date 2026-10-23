@@ -1,0 +1,77 @@
+{
+  "format": "ugc-hook-storyboard/v1",
+  "short": "cv5",
+  "variant": "v2",
+  "trigger": "one_number",
+  "baseline_storyboard": "storyboard_cv5.json",
+  "brief": "brief_cv5.json",
+  "hypothesis": "Ein einziger, belegter Prozentwert erzeugt eine größere Wissenslücke als die alte Typo-Frage.",
+  "truth_guard": "48 % sind die Bewertung der Reparaturkosten relativ zum damaligen Fahrzeugwert – KEIN Wertverlust oder Preisnachlass.",
+  "handoff_at": 5.65,
+  "handoff_to": "BEWEIS 02 · KILOMETERSTAND",
+  "beats": [
+    {
+      "start": 0,
+      "end": 0.8,
+      "images": [
+        "m/cost.png"
+      ],
+      "visual": "Nur „48 %“ über stark unscharfem Report. Keine Headline, kein Chip, kein Beweis-Label, kein lesbarer Zweittext.",
+      "motion": "scale_pulse: Zahl ist ab Frame 1 sichtbar, bewegt sich um 7 % und hält.",
+      "on_screen": [
+        {
+          "value": "48 %",
+          "role": "verified_claim",
+          "brief_claim": "48 % des damaligen Fahrzeugwerts (Bewertung der Reparaturkosten)"
+        }
+      ],
+      "vo_cue": "Achtundvierzig Prozent.",
+      "brief_claims": [
+        "48 % des damaligen Fahrzeugwerts (Bewertung der Reparaturkosten)"
+      ]
+    },
+    {
+      "start": 0.8,
+      "end": 1.5,
+      "images": [
+        "m/cost.png",
+        "m/v4_wreck.png"
+      ],
+      "visual": "Report-Ausschnitt auf den Wortlaut „Bewertung der Reparaturkosten / 48 % des damaligen Fahrzeugwerts“ scharfziehen.",
+      "motion": "focus_reveal: harte Entschärfung auf den belegten Reportbereich.",
+      "on_screen": [],
+      "vo_cue": "Reparaturkosten.",
+      "brief_claims": [
+        "48 % des damaligen Fahrzeugwerts (Bewertung der Reparaturkosten)"
+      ]
+    },
+    {
+      "start": 1.5,
+      "end": 3.2,
+      "images": [
+        "m/cost.png"
+      ],
+      "visual": "48-Prozent-Zeile eingerahmt; die Vergleichsbasis muss lesbar sein.",
+      "motion": "push_in: auf die Zeile „des damaligen Fahrzeugwerts“.",
+      "on_screen": [],
+      "vo_cue": "Des damaligen Fahrzeugwerts.",
+      "brief_claims": [
+        "48 % des damaligen Fahrzeugwerts (Bewertung der Reparaturkosten)"
+      ]
+    },
+    {
+      "start": 3.2,
+      "end": 5.65,
+      "images": [
+        "m/v4_wreck.png"
+      ],
+      "visual": "Harter Schnitt auf das echte Unfallfoto, kein behaupteter Verkaufspreis.",
+      "motion": "hard_cut: vom Zahlenbeleg auf das Unfallfoto.",
+      "on_screen": [],
+      "vo_cue": "Das zeigt der Musterbericht zum Passat.",
+      "brief_claims": [
+        "Kein Unfall? Über 20.000 Euro Schaden"
+      ]
+    }
+  ]
+}

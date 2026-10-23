@@ -49,6 +49,16 @@
       ]
     },
     {
+      "text": "48 % des damaligen Fahrzeugwerts (Bewertung der Reparaturkosten)",
+      "evidence": "m/cost.png",
+      "region": [
+        118,
+        1020,
+        1050,
+        1165
+      ]
+    },
+    {
       "text": "2 MINUTEN VIN-CHECK",
       "evidence": "m/summary.png",
       "region": [

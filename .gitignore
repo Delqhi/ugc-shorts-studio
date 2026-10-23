@@ -4,3 +4,5 @@ __pycache__/
 *.wav
 build/
 build_tmp/
+.venv/
+qa/

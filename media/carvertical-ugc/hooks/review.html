@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Hook Lab · UGC Shorts Studio</title>
+  <style>
+    :root { --bg:#090b0c; --panel:#15191a; --edge:#313938; --text:#f5f6f1; --muted:#a3aca5; --acid:#d7fd64; --red:#ff756c; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; color:var(--text); background:radial-gradient(ellipse at 16% 10%,#1f2a21 0,transparent 34%),radial-gradient(ellipse at 85% 90%,#262220 0,transparent 36%),var(--bg); font:16px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    button,select,textarea { font:inherit; }
+    button { cursor:pointer; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:16px; border-bottom:1px solid var(--edge); padding:16px clamp(16px,3vw,44px); font-size:12px; letter-spacing:.16em; font-weight:750; }
+    .brand { display:flex; align-items:center; gap:10px; }
+    .mark { width:11px; height:11px; background:var(--acid); border-radius:2px; box-shadow:0 0 16px #cafe7e90; }
+    .phase { color:var(--muted); text-align:right; }
+    .shell { display:grid; grid-template-columns:minmax(300px,1.05fr) minmax(320px,1fr); gap:clamp(20px,4vw,72px); align-items:center; max-width:1300px; min-height:calc(100vh - 68px); margin:auto; padding:clamp(24px,4vw,50px); }
+    .stage { display:grid; justify-items:center; gap:12px; }
+    .stage-top { width:min(100%,360px); display:flex; justify-content:space-between; font-size:11px; letter-spacing:.13em; color:var(--muted); text-transform:uppercase; }
+    .stage-top b { color:var(--acid); font-weight:750; }
+    .phone { width:min(100%,360px); aspect-ratio:9/16; position:relative; overflow:hidden; background:#080909; border-radius:25px; border:2px solid #62706a; box-shadow:0 20px 80px #000a,0 0 0 7px #131918; }
+    video { display:block; width:100%; height:100%; object-fit:cover; background:#090b0c; }
+    .mask { position:absolute; inset:0; display:grid; place-items:center; background:#0b0e0dec; color:var(--muted); text-align:center; padding:35px; transition:opacity .17s; }
+    .mask.hidden { opacity:0; pointer-events:none; }
+    .mask strong { display:block; font-size:19px; color:white; margin-bottom:8px; }
+    .clock { width:min(100%,360px); height:3px; background:#404944; overflow:hidden; border-radius:10px; }
+    .clock > div { height:100%; width:0; background:var(--acid); transition:width .1s linear; }
+    .hint { color:var(--muted); max-width:360px; font-size:12px; text-align:center; }
+    .card { padding:clamp(20px,3vw,42px); border:1px solid var(--edge); border-radius:24px; background:linear-gradient(145deg,#1a201dbd,#111513db); box-shadow:0 28px 80px #0006; }
+    .eyebrow { display:inline-flex; gap:10px; align-items:center; color:var(--acid); font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+    .eyebrow:before { content:""; width:21px; height:2px; background:currentColor; }
+    h1 { margin:18px 0 12px; font-size:clamp(34px,4vw,62px); letter-spacing:-.06em; line-height:1.02; max-width:680px; }
+    .intro { color:var(--muted); max-width:53ch; margin:0 0 24px; }
+    label { font-size:12px; color:var(--muted); display:block; margin-bottom:9px; letter-spacing:.08em; text-transform:uppercase; font-weight:700; }
+    select { width:100%; appearance:none; border:1px solid #525d55; border-radius:10px; color:var(--text); background:#0e1412; padding:13px 14px; margin-bottom:20px; }
+    .meter { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:13px 0; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); color:var(--muted); font-size:13px; }
+    .meter b { color:var(--text); font-variant-numeric:tabular-nums; }
+    .block { margin-top:22px; }
+    .block h2 { margin:0 0 12px; font-size:18px; letter-spacing:-.025em; }
+    .binary { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .binary button { background:#0e1412; border:1px solid #46514a; border-radius:12px; padding:15px 9px; color:var(--text); font-weight:750; transition:transform .14s, background .14s; }
+    .binary button:hover { transform:translateY(-2px); }
+    .binary button[aria-pressed="true"] { background:var(--acid); border-color:var(--acid); color:#101612; }
+    textarea { display:block; resize:vertical; width:100%; min-height:72px; border:1px solid #46514a; border-radius:12px; background:#0e1412; padding:12px; color:var(--text); }
+    .actions { display:flex; flex-wrap:wrap; gap:9px; margin-top:20px; }
+    .primary { border:0; background:var(--acid); color:#111710; border-radius:10px; padding:13px 19px; font-weight:800; }
+    .primary:disabled { opacity:.4; cursor:not-allowed; }
+    .secondary { border:1px solid #4c5a4e; background:transparent; color:var(--text); border-radius:10px; padding:12px 16px; }
+    .status { margin:16px 0 0; font-size:12px; color:var(--muted); min-height:32px; }
+    .results { border-top:1px solid var(--edge); margin-top:20px; padding-top:17px; font-size:12px; color:var(--muted); }
+    .results strong { color:var(--text); }
+    .results ul { margin:8px 0; padding-left:17px; }
+    .results li { margin-bottom:4px; }
+    footer { max-width:1300px; margin:0 auto; padding:0 clamp(24px,4vw,50px) 25px; color:#8e9990; font-size:12px; }
+    a { color:var(--acid); }
+    @media (max-width:860px) { .shell { grid-template-columns:1fr; align-items:start; } .card { order:0; } .stage { order:1; } .phone { width:min(68vw,300px); } }
+    @media (prefers-reduced-motion: reduce) { .binary button, .mask { transition:none; } }
+  </style>
+  <script src="review.js" defer></script>
+</head>
+<body>
+  <header><div class="brand"><span class="mark" aria-hidden="true"></span> UGC STUDIO / HOOK LAB</div><div class="phase">P1 · 1,5-S-SEKUNDEN-BLINDTEST</div></header>
+  <main class="shell">
+    <section class="stage" aria-label="Stummer Videotest">
+      <div class="stage-top"><span>Stummes Autoplay</span><b id="stage-number">— / 3</b></div>
+      <div class="phone"><video id="video" playsinline muted preload="auto" aria-label="1,5 Sekunden Hook-Vorschau"></video><div class="mask" id="mask"><div><strong>Bereit für 1,5 Sekunden?</strong>Erst schauen, dann entscheiden. Kein Ton, kein Variantenname.</div></div></div>
+      <div class="clock"><div id="progress"></div></div>
+      <p class="hint">Die Original-MP4 ist als Kontrollgruppe dabei. Neue Clips: absichtlich stumme Roh-Experimente, keine Posts.</p>
+    </section>
+    <section class="card">
+      <div class="eyebrow">Idee vor Encoding</div>
+      <h1>Stoppt das deinen Daumen?</h1>
+      <p class="intro">Pro Short der bisherige Anfang als Kontrolle und zwei neue Motion-Ansätze – mit echtem Creator-Take auch V1. Reihenfolge zufällig. Eine sofortige Entscheidung zählt mehr als eine Diskussion über Pixel.</p>
+      <label for="campaign">Kampagne</label>
+      <select id="campaign"><option value="cv5">carVertical · Musterbericht</option><option value="app">Einfach Hausen · Beleg</option><option value="yt">NVIDIA · Roboter</option></select>
+      <div class="meter"><span id="counter">Noch kein Durchlauf</span><b>Ton aus · 1,5 s</b></div>
+      <div class="actions"><button class="primary" type="button" id="play">Durchlauf starten</button><button class="secondary" type="button" id="restart">Neu mischen</button></div>
+      <div class="block" id="vote" hidden>
+        <h2>Würdest du weiterschauen?</h2>
+        <div class="binary" id="stay"><button type="button" data-value="yes" aria-pressed="false">Ja, weiter</button><button type="button" data-value="no" aria-pressed="false">Nein, scrollen</button></div>
+        <div class="block"><h2>Konflikt sofort verstanden?</h2><div class="binary" id="understood"><button type="button" data-value="yes" aria-pressed="false">Ja</button><button type="button" data-value="no" aria-pressed="false">Nein</button></div></div>
+        <div class="block"><label for="interpretation">Was ist passiert? (optional)</label><textarea id="interpretation" placeholder="In deinen Worten, ohne den Clip erneut zu sehen"></textarea></div>
+        <div class="actions"><button class="primary" type="button" id="next" disabled>Antwort speichern & weiter</button></div>
+      </div>
+      <p class="status" id="status" role="status">Die echten Creator-Takes (V1) fehlen und werden nicht durch KI-Gesichter ersetzt.</p>
+      <div class="results"><strong>Bisher lokal gespeichert</strong><ul id="scores"></ul><button type="button" class="secondary" id="export">CSV exportieren</button><p>Nur in diesem Browser gespeichert. Kein Tracking, keine Server-Uploads. Kleine Stichproben sind keine Viralitätsprognose.</p></div>
+    </section>
+  </main>
+  <footer>Quellmedien nur im Kampagnenkontext verwenden (siehe NOTICE.md im Repo). Storyboards und Wahrheitsgrenzen: docs/P1_HOOKS.md. Kein Clip ohne echte VO/ASR und MP4-Preflight veröffentlichen.</footer>
+</body>
+</html>

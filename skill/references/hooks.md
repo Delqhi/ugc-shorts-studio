@@ -3,6 +3,8 @@
 Der Hook entscheidet, ob der Clip überhaupt läuft. Ziel: **Sofort ein visueller Konflikt**
 (Bild + Behauptung, die sich widerspricht) — kein Text, der erst erklärt wird.
 
+**Wahrheitsgrenze bei den P1-Varianten:** Die alten Muster mit „Unfallfrei“/„Verkäufer sagt“ sind nur dann *Zitate*, wenn ein echtes Inserat, Chat oder O-Ton vorliegt. Der carVertical-Musterbericht liefert das nicht. Hier stattdessen eine klar redaktionelle **Frage „Unfallfrei?“ ohne Absender** → echtes Unfallfoto/Report bei 0,8 s. Auch „48 %“ heißt *Reparaturkosten relativ zum damaligen Fahrzeugwert*, nicht Wertverlust. Die neun konkreten Versuchsanordnungen stehen in `docs/P1_HOOKS.md`; sie ersetzen keinen MP4-Preflight.
+
 Die Muster sind Bausteine: „Konter" = die Behauptung im Bild, der Stempel macht den
 Widerspruch sichtbar. „Zahl-Sturz" = eine Zahl fällt, dann der Konter.
 

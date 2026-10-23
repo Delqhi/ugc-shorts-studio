@@ -1,0 +1,74 @@
+{
+  "format": "ugc-hook-storyboard/v1",
+  "short": "app",
+  "variant": "v2",
+  "trigger": "one_number",
+  "baseline_storyboard": "storyboard_app.json",
+  "brief": "brief_app.json",
+  "hypothesis": "Der tatsächlich bezahlte Betrag zieht als einzige Zahl die Aufmerksamkeit an; Produktbeweis erst beim Reveal.",
+  "truth_guard": "150,90 € ist der im Eigenprodukt-Beleg dokumentierte Betrag, kein typischer Auftrag, Durchschnitt oder Auszahlungsversprechen.",
+  "handoff_at": 4.58,
+  "handoff_to": "BEWEIS 02",
+  "beats": [
+    {
+      "start": 0,
+      "end": 0.8,
+      "images": [
+        "app/s1_receipt.png"
+      ],
+      "visual": "Nur „150,90 €“ über unleserlich unscharfem Beleg; keine weitere Schrift, kein Logo.",
+      "motion": "scale_pulse: Zahl ab Frame 1, kurzer 7-%-Impact.",
+      "on_screen": [
+        {
+          "value": "150,90 €",
+          "role": "verified_claim",
+          "brief_claim": "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €"
+        }
+      ],
+      "vo_cue": "Hundertfünfzig Euro neunzig.",
+      "brief_claims": [
+        "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €"
+      ]
+    },
+    {
+      "start": 0.8,
+      "end": 1.5,
+      "images": [
+        "app/s1_receipt.png"
+      ],
+      "visual": "Fokus springt auf „Bezahlt 150,90 €“ im echten App-Beleg.",
+      "motion": "focus_reveal: Bezahlt-Zeile scharf, nicht neuer Text.",
+      "on_screen": [],
+      "vo_cue": "Bezahlt.",
+      "brief_claims": [
+        "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €"
+      ]
+    },
+    {
+      "start": 1.5,
+      "end": 2.8,
+      "images": [
+        "app/s1_receipt.png"
+      ],
+      "visual": "Beleg als Ganzes zeigen, damit die Zahl nicht aus dem Zusammenhang fällt.",
+      "motion": "pull_out: vom Betrag zum vollständigen Beleg.",
+      "on_screen": [],
+      "vo_cue": "So steht es auf dem Beleg.",
+      "brief_claims": [
+        "Vereinbarter Auftragsbetrag 150,90 € — Bezahlt 150,90 €"
+      ]
+    },
+    {
+      "start": 2.8,
+      "end": 4.58,
+      "images": [
+        "app/s2_team.png"
+      ],
+      "visual": "Echter Team-Screen als Übergang zur zweiten Szene des Basisshorts.",
+      "motion": "hard_cut: Zahlung zu Team.",
+      "on_screen": [],
+      "vo_cue": "Und wer ist zuständig?",
+      "brief_claims": []
+    }
+  ]
+}
